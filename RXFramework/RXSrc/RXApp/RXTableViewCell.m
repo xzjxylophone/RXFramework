@@ -19,6 +19,15 @@
 - (void)awakeFromNib {
     // Initialization code
     
+    // 重新添加一下, 这样解决iOS8和滑动删除
+    if (self.vContent.superview == self.contentView) {
+        [self.vContent removeFromSuperview];
+        [self.contentView addSubview:self.vContent];
+        [RXManager fillAllInSuperView:self.contentView subView:self.vContent];
+    }
+    
+    // 记得子类需要调用 [super awakeFromNib];
+    
 }
 
 

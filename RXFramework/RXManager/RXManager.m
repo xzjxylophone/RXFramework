@@ -96,6 +96,165 @@
     
 }
 
+#pragma mark - Safe Data
+
++ (NSDictionary *)safeDictonaryFromData:(id)data
+{
+    if ([data isKindOfClass:[NSDictionary class]]) {
+        return data;
+    } else {
+        return [NSDictionary new];
+    }
+}
++ (NSNumber *)safeNumberFromData:(id)data
+{
+    if ([data isKindOfClass:[NSNumber class]]) {
+        return data;
+    } else {
+        if ([data respondsToSelector:@selector(doubleValue)]) {
+            double dValue = [data doubleValue];
+            return [NSNumber numberWithDouble:dValue];
+        } else {
+            return @(0);
+        }
+    }
+}
+
++ (NSString *)safeStringFromData:(id)data
+{
+    if ([data isKindOfClass:[NSString class]]) {
+        return data;
+    } else if ([data isKindOfClass:[NSNull class]]) {
+        return @"";
+    } else {
+        return [NSString stringWithFormat:@"%@", data];
+    }
+}
+
++ (NSArray *)safeArrayFromData:(id)data
+{
+    if ([data isKindOfClass:[NSArray class]]) {
+        return data;
+    } else {
+        return [NSArray new];
+    }
+}
+
+
+#pragma mark - Layout Constraint
++ (void)fillTopInSuperView:(UIView *)superview subView:(UIView *)subView
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:subView.frame.size.height];
+    [superview addConstraints:@[lc1, lc2, lc3]];
+    [subView addConstraint:lc4];
+}
+
++ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:subView.frame.size.height];
+    [superview addConstraints:@[lc1, lc2, lc3]];
+    [subView addConstraint:lc4];
+}
+
++ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1 constant:bottom];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:subView.frame.size.height];
+    [superview addConstraints:@[lc1, lc2, lc3]];
+    [subView addConstraint:lc4];
+}
+
++ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1 constant:bottom];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1 constant:-top];
+    [superview addConstraints:@[lc1, lc2, lc3, lc4]];
+}
+
++ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top width:(CGFloat)width right:(CGFloat)right
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1 constant:width];
+    
+    
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1 constant:bottom];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:right];
+    
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1 constant:-top];
+    [subView addConstraint:lc1];
+    [superview addConstraints:@[lc2, lc3, lc4]];
+}
+
++ (void)fillAllInSuperView:(UIView *)superview subView:(UIView *)subView
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    [superview addConstraints:@[lc1, lc2, lc3, lc4]];
+}
+
+
+// 垂直居中, 水平左右相距10像素
++ (void)fillVMiddleHSameInSuperView:(UIView *)superview subView:(UIView *)subView
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:-10];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:10];
+    
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:subView.frame.size.height];
+    
+    // 垂直居中
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    
+    [subView addConstraint:lc4];
+    
+    [superview addConstraints:@[lc1, lc2, lc3]];
+}
+
++ (void)fillVMidInSuperView:(UIView *)superview subView:(UIView *)subView top:(CGFloat)top
+{
+    [subView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *lc3 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    
+    
+    NSLayoutConstraint *lc4 = [NSLayoutConstraint constraintWithItem:superview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1 constant:-top];
+    
+    
+    
+    
+    NSLayoutConstraint *lc2 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:subView.frame.size.height];
+    
+    [subView addConstraint:lc2];
+    
+    [superview addConstraints:@[lc1, lc3, lc4]];
+}
+
+
+
+
+
+
+
+
+
 
 #pragma mark - Guide
 - (BOOL)firstStartGuideValue

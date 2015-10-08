@@ -49,6 +49,24 @@
 
 
 
+#pragma mark - Safe Data
+
++ (NSDictionary *)safeDictonaryFromData:(id)data;
++ (NSNumber *)safeNumberFromData:(id)data;
++ (NSString *)safeStringFromData:(id)data;
++ (NSArray *)safeArrayFromData:(id)data;
+
+
+#pragma mark - Layout Constraint
++ (void)fillTopInSuperView:(UIView *)superview subView:(UIView *)subView;
++ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView;
++ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom;
++ (void)fillAllInSuperView:(UIView *)superview subView:(UIView *)subView;
++ (void)fillVMiddleHSameInSuperView:(UIView *)superview subView:(UIView *)subView;
++ (void)fillVMidInSuperView:(UIView *)superview subView:(UIView *)subView top:(CGFloat)top;
++ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top;
++ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top width:(CGFloat) width right:(CGFloat)right;
+
 #pragma mark - Guide
 // 是否显示过引导页了, key值是version+build
 - (BOOL)firstStartGuideValue;

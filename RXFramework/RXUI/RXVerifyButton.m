@@ -85,7 +85,7 @@
             NSString *text = [NSString stringWithFormat:@"%ds", self.maxTime];
             self.lblShow.text = text;
 
-            [RXUtils fillAllInSuperView:self subView:self.lblShow];
+            [RXManager fillAllInSuperView:self subView:self.lblShow];
             self.enabled = NO;
             [self startTimer];
         }

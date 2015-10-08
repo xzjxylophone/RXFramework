@@ -33,55 +33,8 @@ typedef enum RXDateFormat {
 + (UIBarButtonItem *)rxBarButtonItemWithTarget:(id)target action:(SEL)action title:(NSString *)title backgroundImageName:(NSString *)backgroundImageName;
 
 
-+ (void)drawFrameInView:(UIView *)view top:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right;
-+ (void)drawFrameInView:(UIView *)view frame:(CGRect)frame;
-+ (void)drawLineInView:(UIView *)view frames:(NSArray *)frames;
-+ (void)drawLineInView:(UIView *)view top:(CGFloat)top bottom:(CGFloat)bottom;
-+ (void)drawLineInView:(UIView *)view left:(CGFloat)left right:(CGFloat)right;
 
 
-+ (void)iOS6GroupedTableView:(UITableView *)tableView cell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-
-+ (NSString *)timeFormatted:(int)totalSeconds;
-+ (NSString *)timeFormatted2:(int)totalSeconds;
-
-
-#pragma mark - Layout Constraint
-+ (void)fillTopInSuperView:(UIView *)superview subView:(UIView *)subView;
-+ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView;
-+ (void)fillBottomInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom;
-+ (void)fillAllInSuperView:(UIView *)superview subView:(UIView *)subView;
-+ (void)fillVMiddleHSameInSuperView:(UIView *)superview subView:(UIView *)subView;
-+ (void)fillVMidInSuperView:(UIView *)superview subView:(UIView *)subView top:(CGFloat)top;
-+ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top;
-+ (void)fillInSuperView:(UIView *)superview subView:(UIView *)subView bottom:(CGFloat)bottom top:(CGFloat)top width:(CGFloat) width right:(CGFloat)right;
-
-
-+ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
-
-
-#pragma mark - Analysis
-+ (NSDictionary *)dictonaryFromDictionary:(NSDictionary *)dic key:(NSString *)key;
-+ (NSNumber *)numberFromDictionary:(NSDictionary *)dic key:(NSString *)key;
-+ (NSString *)stringFromDictionary:(NSDictionary *)dic key:(NSString *)key;
-+ (NSArray *)arrayFromDictionary:(NSDictionary *)dic key:(NSString *)key;
-
-+ (NSDictionary *)dictonaryFromData:(id)data;
-+ (NSNumber *)numberFromData:(id)data;
-+ (NSString *)stringFromData:(id)data;
-+ (NSArray *)arrayFromData:(id)data;
-
-
-+ (NSString *)moneyStringWithDouble:(double)money;
-+ (NSString *)percentWithDouble:(double)percent;
-
-
-
-#pragma mark - Tool
-+ (NSString*)getAppVersion;
-+ (NSString *)getSystemVersion;
-+ (NSString *)getSystemLanguage;
-+ (CGFloat)screenWidth;
 
 
 #pragma mark - Date Fromat
@@ -93,8 +46,7 @@ typedef enum RXDateFormat {
 + (NSDate *)dateFromSecond:(long long)second;
 
 #pragma mark - friend path
-+ (NSString *)getFriendsInfoPath;
-+ (NSString *)transformToPinyinWithString:(NSString *)str;
+
 
 
 @end

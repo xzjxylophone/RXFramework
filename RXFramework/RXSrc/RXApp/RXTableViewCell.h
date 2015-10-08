@@ -10,6 +10,14 @@
 #import "RXAppPch.h"
 
 @interface RXTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) IBOutlet UIView *vContent;
+
+
+
+
+
+
 - (void)setData:(id)data;
 
 
