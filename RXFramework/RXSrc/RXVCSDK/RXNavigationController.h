@@ -1,5 +1,5 @@
 //
-//  MLNavigationController.h
+//  RXNavigationController.h
 //  iplaza
 //
 //  Created by Rush.D.Xzj on 13-7-11.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MLNavigationController : UINavigationController
+@interface RXNavigationController : UINavigationController
 {
 @protected
     BOOL _canDragBack;

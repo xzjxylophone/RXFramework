@@ -9,7 +9,7 @@
 #import "UIImage+RXUtility.h"
 
 @implementation UIImage (RXUtility)
-- (UIImage *)scaleToSize:(CGSize)newSize
+- (UIImage *)rx_scaleToSize:(CGSize)newSize
 {
     UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -20,7 +20,7 @@
     return newImage;
 }
 
-- (UIImage *)rotateWithimageOrientation:(UIImageOrientation)imageOrientation
+- (UIImage *)rx_rotateWithimageOrientation:(UIImageOrientation)imageOrientation
 {
     CGImageRef imgRef = self.CGImage;
     CGFloat width = CGImageGetWidth(imgRef);
@@ -95,16 +95,5 @@
     UIGraphicsEndImageContext();
     return imageCopy;
 }
-+ (UIImage *)createImageWithColor:(UIColor *)color
-{
-    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return theImage;
-}
+
 @end

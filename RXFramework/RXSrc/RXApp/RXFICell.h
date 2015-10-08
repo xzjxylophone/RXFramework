@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXCell.h"
+#import "RXTableViewCell.h"
 
-@interface RXFICell : RXCell
+@interface RXFICell : RXTableViewCell
 @property (nonatomic, strong) UIImageView *iv;
 
 @property (nonatomic, strong) UILabel *lbl;

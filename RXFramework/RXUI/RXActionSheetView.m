@@ -30,7 +30,7 @@
     if (self = [super initWithFrame:frame]) {
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
         self.vBg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, [UIScreen mainScreen].bounds.size.height)];
-        self.vBg.backgroundColor = [UIColorFromRGB(0xb3b3b3) colorWithAlphaComponent:0.5];
+        self.vBg.backgroundColor = [[UIColor rx_colorWithString:@"#b3b3b3"] colorWithAlphaComponent:0.5];
         self.isSupportClickOtherToClose = YES;
         self.backgroundColor = [UIColor clearColor];
     }
@@ -42,7 +42,7 @@
 - (CGFloat)showY
 {
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    return (height - self.height) / 2.0f;
+    return (height - self.rx_height) / 2.0f;
 }
 
 
@@ -53,12 +53,12 @@
     [window addSubview:self.vBg];
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CGFloat selfY = self.showY;
-    self.top = height;
+    self.rx_top = height;
     if (self.isSupportAnimate) {
         [UIView beginAnimations:@"abc" context:nil];
         [UIView setAnimationDuration:0.5];
     }
-    self.top = selfY;
+    self.rx_top = selfY;
     if (self.isSupportAnimate) {
         [UIView commitAnimations];
     }
@@ -76,7 +76,7 @@
         [self.vBg removeFromSuperview];
         [self removeFromSuperview];
     }
-    self.top = height;
+    self.rx_top = height;
     if (self.isSupportAnimate) {
         [UIView commitAnimations];
     }

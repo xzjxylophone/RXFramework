@@ -1,17 +1,17 @@
 //
-//  MLNavigationController.m
+//  RXNavigationController.m
 //  iplaza
 //
 //  Created by Rush.D.Xzj on 13-7-11.
 //  Copyright (c) 2013年 Wanda Inc. All rights reserved.
 //
 
-#import "MLNavigationController.h"
+#import "RXNavigationController.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define KEY_WINDOW  [[UIApplication sharedApplication]keyWindow]
 
-@interface MLNavigationController ()
+@interface RXNavigationController ()
 <UIGestureRecognizerDelegate>
 {
     CGPoint startTouch;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation MLNavigationController
+@implementation RXNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

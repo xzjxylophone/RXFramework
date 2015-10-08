@@ -14,7 +14,7 @@
 - (void)startGuideAction:(id)sender
 {
     [self setFirstStartGuideValue:YES];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NKey_RXManager_CloseStartGuide object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NKey_RX_CloseStartGuide object:nil];
     
 }
 
@@ -91,7 +91,7 @@
 #pragma mark - Device Info
 + (void)printDeviceInfo
 {
-    UIDevice *device = [UIDevice currentDevice];
+//    UIDevice *device = [UIDevice currentDevice];
     
     
 }

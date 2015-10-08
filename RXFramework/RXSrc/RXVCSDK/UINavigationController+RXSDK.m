@@ -9,7 +9,7 @@
 #import "UINavigationController+RXSDK.h"
 #import "UIViewController+RXSDK.h"
 #import "RXDefine.h"
-#import "MLNavigationController.h"
+#import "RXNavigationController.h"
 @implementation UINavigationController (RXSDK)
 - (BOOL)rx_openString:(NSString *)str query:(NSDictionary *)query animate:(BOOL)animate
 {
@@ -29,7 +29,7 @@
     UIViewController *vc = [UIViewController rx_vcWithString:str query:query];
     if (vc != nil) {
         
-        MLNavigationController *nc = [[MLNavigationController alloc] initWithRootViewController:vc];
+        RXNavigationController *nc = [[RXNavigationController alloc] initWithRootViewController:vc];
         
         [self presentViewController:nc animated:animate completion:nil];
         return YES;

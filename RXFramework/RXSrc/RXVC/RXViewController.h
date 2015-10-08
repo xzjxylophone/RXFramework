@@ -11,5 +11,6 @@
 @interface RXViewController : UIViewController
 
 @property (nonatomic, strong) UIBarButtonItem *bbiBack;
+- (void)bbiBackAction:(id)sender;
 
 @end

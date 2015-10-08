@@ -1,5 +1,5 @@
 //
-//  RXCell.h
+//  RXTableViewCell.h
 //  Taka
 //
 //  Created by Rush.D.Xzj on 15-1-20.
@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "RXAppPch.h"
 
-@interface RXCell : UITableViewCell
+@interface RXTableViewCell : UITableViewCell
 - (void)setData:(id)data;
 
 
+// 从xib获取cell,是xib的index为0
 + (id)cell_xib;
+// 从 UITableViewCell initWithStyle
 + (instancetype)cell;
 
 

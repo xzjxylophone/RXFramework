@@ -10,8 +10,8 @@
 
 
 
-
-#define NKey_RXManager_CloseStartGuide      @"NKey_RXManager_CloseStartGuide"
+// 关闭引导页时候的通知
+#define NKey_RX_CloseStartGuide      @"NKey_RX_CloseStartGuide"
 
 
 

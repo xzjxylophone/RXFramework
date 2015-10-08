@@ -7,9 +7,9 @@
 //
 
 #import "RXPushTokenManager.h"
-#define RXPushTokenManager_PushToken        @"RXPushTokenManager_PushToken"
-#define RXPushTokenManager_PushTokenData        @"RXPushTokenManager_PushTokenData"
-#define RXPushTokenManager_IsUploadPushToken        @"RXPushTokenManager_IsUploadPushToken"
+#define UDKey_RX_PushToken        @"UDKey_RX_PushToken"
+#define UDKey_RX_PushTokenData        @"UDKey_RX_PushTokenData"
+#define UDKey_RX_IsUploadPushToken        @"UDKey_RX_IsUploadPushToken"
 
 
 @implementation RXPushTokenManager
@@ -23,7 +23,7 @@
 - (BOOL)isUploadPushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    id value = [ud valueForKey:RXPushTokenManager_IsUploadPushToken];
+    id value = [ud valueForKey:UDKey_RX_IsUploadPushToken];
     if (value == nil) {
         return NO;
     } else {
@@ -39,14 +39,14 @@
 - (void)saveIsUploadPushToken:(BOOL)value
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setValue:@(value) forKey:RXPushTokenManager_IsUploadPushToken];
+    [ud setValue:@(value) forKey:UDKey_RX_IsUploadPushToken];
     [ud synchronize];
 }
 
 - (NSString *)lastPushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    id value = [ud valueForKey:RXPushTokenManager_PushToken];
+    id value = [ud valueForKey:UDKey_RX_PushToken];
     if (value == nil) {
         return @"";
     } else {
@@ -56,14 +56,14 @@
 - (void)savePushToken:(NSString *)pushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setValue:pushToken forKey:RXPushTokenManager_PushToken];
+    [ud setValue:pushToken forKey:UDKey_RX_PushToken];
     [ud synchronize];
 }
 
 - (NSData *)lastPushTokenData
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    id value = [ud valueForKey:RXPushTokenManager_PushTokenData];
+    id value = [ud valueForKey:UDKey_RX_PushTokenData];
     if (value == nil) {
         return nil;
     } else {
@@ -73,7 +73,7 @@
 - (void)savePushTokenData:(NSData *)pushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setValue:pushToken forKey:RXPushTokenManager_PushTokenData];
+    [ud setValue:pushToken forKey:UDKey_RX_PushTokenData];
     [ud synchronize];
 }
 

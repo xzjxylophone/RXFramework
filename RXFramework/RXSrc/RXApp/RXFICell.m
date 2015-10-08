@@ -40,7 +40,7 @@
             [self addSubview:self.lbl];
         }
         
-        self.vLine.frame = CGRectMake(self.lbl.left, self.height - 0.5, [UIScreen mainScreen].bounds.size.width - self.lbl.left, 0.5);
+        self.vLine.frame = CGRectMake(self.lbl.rx_left, self.rx_height - 0.5, [UIScreen mainScreen].bounds.size.width - self.lbl.rx_left, 0.5);
         
         
     } else {

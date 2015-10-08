@@ -28,7 +28,13 @@
     
 }
 
-
+- (UIBarButtonItem *)bbiBack
+{
+    if (_bbiBack == nil) {
+        _bbiBack = [RXUtils rxBarButtonItemWithTarget:self action:@selector(bbiBackAction:) imageName:@"icon_back"];
+    }
+    return _bbiBack;
+}
 
 
 
@@ -36,8 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.bbiBack = [RXUtils rxBarButtonItemWithTarget:self action:@selector(bbiBackAction:) imageName:@"icon_back"];
     
     self.navigationItem.leftBarButtonItem = self.bbiBack;
 

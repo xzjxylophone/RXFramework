@@ -6,6 +6,14 @@
 //  Copyright (c) 2015年 Rush.D.Xzj. All rights reserved.
 //
 
+/*
+ 
+ PushToken 管理
+ 
+ 
+ */
+
+
 #import <Foundation/Foundation.h>
 
 @interface RXPushTokenManager : NSObject

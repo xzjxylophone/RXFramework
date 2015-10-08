@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (RXUtility)
-- (UIImage *)scaleToSize:(CGSize)newSize;
+- (UIImage *)rx_scaleToSize:(CGSize)newSize;
 //翻转UIImage
-- (UIImage *)rotateWithimageOrientation:(UIImageOrientation)imageOrientation;
+- (UIImage *)rx_rotateWithimageOrientation:(UIImageOrientation)imageOrientation;
 
-//根据color得到图片
-+ (UIImage *)createImageWithColor:(UIColor *)color;
+
 
 @end

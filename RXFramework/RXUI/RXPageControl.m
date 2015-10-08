@@ -30,7 +30,7 @@
 {
     NSArray *views = self.subviews;
     for (NSInteger i = 0; i < views.count; i++) {
-        UIImageView *iv = views[i];
+//        UIImageView *iv = views[i];
 //        if (i == self.currentPage) {
 //            iv.image = self.activeImage;
 //        } else {

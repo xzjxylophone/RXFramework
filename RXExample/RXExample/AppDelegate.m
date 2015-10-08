@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "MLNavigationController.h"
+#import "RXNavigationController.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UINavigationControllerDelegate>
 @property (nonatomic, strong) UINavigationController *mainNC;
 
 @end
@@ -20,11 +20,10 @@
 - (void)showMain
 {
     UIViewController *vc1 = [UIViewController rx_vcWithString:@"wdpage://REMainViewController"];
-    self.mainNC = [[MLNavigationController alloc] initWithRootViewController:vc1];
+    self.mainNC = [[RXNavigationController alloc] initWithRootViewController:vc1];
     self.mainNC.delegate = self;
     
-    NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-                          NSForegroundColorAttributeName:UIColorFromRGB(0x969696)};
+    NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19]};
     [self.mainNC.navigationBar setTitleTextAttributes:dic];
     
     self.window.rootViewController = self.mainNC;

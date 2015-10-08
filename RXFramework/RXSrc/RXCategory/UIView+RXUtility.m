@@ -32,116 +32,116 @@
     objc_setAssociatedObject(self, @"rx_data", rx_data, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (CGFloat)left
+- (CGFloat)rx_left
 {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x
+- (void)setRx_Left:(CGFloat)x
 {
     CGRect frame = self.frame;
     frame.origin.x = ceilf(x);
     self.frame = frame;
 }
 
-- (CGFloat)top
+- (CGFloat)rx_top
 {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y
+- (void)setRx_Top:(CGFloat)y
 {
     CGRect frame = self.frame;
     frame.origin.y = ceilf(y);
     self.frame = frame;
 }
 
-- (CGFloat)right
+- (CGFloat)rx_right
 {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right
+- (void)setRx_Right:(CGFloat)right
 {
     CGRect frame = self.frame;
     frame.origin.x = ceilf(right - frame.size.width);
     self.frame = frame;
 }
 
-- (CGFloat)bottom
+- (CGFloat)rx_bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom
+- (void)setRx_Bottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
     frame.origin.y = ceilf(bottom - frame.size.height);
     self.frame = frame;
 }
 
-- (CGFloat)centerX
+- (CGFloat)rx_centerX
 {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX
+- (void)setRx_CenterX:(CGFloat)centerX
 {
     self.center = CGPointMake(ceilf(centerX), self.center.y);
 }
 
-- (CGFloat)centerY
+- (CGFloat)rx_centerY
 {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY
+- (void)setRx_CenterY:(CGFloat)centerY
 {
     self.center = CGPointMake(self.center.x, ceilf(centerY));
 }
 
-- (CGFloat)width
+- (CGFloat)rx_width
 {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width
+- (void)setRx_Width:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = ceilf(width);
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)rx_height
 {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height
+- (void)setRx_Height:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = ceilf(height);
     self.frame = frame;
 }
 
-- (CGPoint)origin
+- (CGPoint)rx_origin
 {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin
+- (void)setRx_Origin:(CGPoint)origin
 {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)size
+- (CGSize)rx_size
 {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size
+- (void)setRx_Size:(CGSize)size
 {
     CGRect frame = self.frame;
     frame.size = size;
@@ -151,7 +151,7 @@
 - (void)rx_makeRound
 {
     self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = self.width / 2.0f;
+    self.layer.cornerRadius = self.rx_width / 2.0f;
 }
 
 
@@ -167,7 +167,7 @@
 - (void)rx_makeLeftRightRound
 {
     self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = self.height / 2.0f;
+    self.layer.cornerRadius = self.rx_height / 2.0f;
 }
 
 - (void)rx_removeAllSubviews

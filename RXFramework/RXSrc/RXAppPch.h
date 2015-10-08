@@ -14,7 +14,6 @@
 
 
 #import "RXDefine.h"
-#import "RXConstString.h"
 #import "RXUserManager.h"
 
 #pragma mark - Category
@@ -26,7 +25,6 @@
 #import "NSString+RXUtility.h"
 #import "UILabel+RXUtility.h"
 #import "UIFont+RXUtility.h"
-#import "UIImage+APLBlurEffect.h"
 #import "UIScrollView+RXUtility.h"
 
 
@@ -53,7 +51,7 @@
 
 
 #pragma mark - UI
-#import "RXCell.h"
+#import "RXTableViewCell.h"
 
 
 #import "RXManager.h"

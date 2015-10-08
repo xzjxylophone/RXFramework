@@ -48,7 +48,7 @@
     btn.frame = CGRectMake(0, 7, 80, 20);
     btn.titleLabel.font = font;
     [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:UIColorFromRGB(0x0ea3f9) forState:UIControlStateNormal];
+//    [btn setTitleColor:UIColorFromRGB(0x0ea3f9) forState:UIControlStateNormal];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
