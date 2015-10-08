@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) int usedTime; // 花费的时间
 @property (nonatomic, assign) int maxTime;
-@property (nonatomic, assign) ESQPwdViewStatus esqLastPwdViewStatus;
+@property (nonatomic, assign) E_RX_VerifyStatus last_E_RX_VerifyStatus;
 
 
 
@@ -45,31 +45,31 @@
 
 - (void)updateToLastStatues
 {
-    switch (self.esqLastPwdViewStatus) {
-        case kESQPwdViewStatusAgain:
-            self.esqPwdViewStatus = kESQPwdViewStatusAgain;
+    switch (self.last_E_RX_VerifyStatus) {
+        case kE_RX_VerifyStatusAgain:
+            self.e_RX_VerifyStatus = kE_RX_VerifyStatusAgain;
             return;
-        case kESQPwdViewStatusCountDown:
+        case kE_RX_VerifyStatusCountDown:
             if (self.timer == nil) {
-                self.esqPwdViewStatus = kESQPwdViewStatusAgain;
+                self.e_RX_VerifyStatus = kE_RX_VerifyStatusAgain;
             } else {
-                self.esqPwdViewStatus = kESQPwdViewStatusCountDown;
+                self.e_RX_VerifyStatus = kE_RX_VerifyStatusCountDown;
             }
             break;
-        case kESQPwdViewStatusOK:
-        case kESQPwdViewStatusInit:
+        case kE_RX_VerifyStatusOK:
+        case kE_RX_VerifyStatusInit:
         default:
             // 目前应该不会出现此状况
             break;
     }
 }
 
-- (void)setEsqPwdViewStatus:(ESQPwdViewStatus)esqPwdViewStatus
+- (void)setE_RX_VerifyStatus:(E_RX_VerifyStatus)e_RX_VerifyStatus
 {
-    self.esqLastPwdViewStatus = self.esqPwdViewStatus;
-    _esqPwdViewStatus = esqPwdViewStatus;
-    switch (esqPwdViewStatus) {
-        case kESQPwdViewStatusInit:
+    self.last_E_RX_VerifyStatus = self.e_RX_VerifyStatus;
+    _e_RX_VerifyStatus = e_RX_VerifyStatus;
+    switch (e_RX_VerifyStatus) {
+        case kE_RX_VerifyStatusInit:
         {
             [self.lblShow removeFromSuperview];
             self.lblShow.text = @"";
@@ -77,7 +77,7 @@
             self.enabled = YES;
         }
             break;
-        case kESQPwdViewStatusCountDown:
+        case kE_RX_VerifyStatusCountDown:
         {
             [self addSubview:self.lblShow];
             [self setTitle:@"" forState:UIControlStateNormal];
@@ -90,14 +90,14 @@
             [self startTimer];
         }
             break;
-        case kESQPwdViewStatusAgain:
+        case kE_RX_VerifyStatusAgain:
         {
             [self.lblShow removeFromSuperview];
             [self setTitle:@"再发一次" forState:UIControlStateNormal];
             self.enabled = YES;
         }
             break;
-        case kESQPwdViewStatusOK:
+        case kE_RX_VerifyStatusOK:
         {
             [self.lblShow removeFromSuperview];
             [self setTitle:@"确定" forState:UIControlStateNormal];
@@ -123,18 +123,18 @@
 #pragma mark - Action
 - (void)btnTouchUpInside:(id)sender
 {
-    switch (self.esqPwdViewStatus) {
-        case kESQPwdViewStatusInit:
-        case kESQPwdViewStatusAgain:
+    switch (self.e_RX_VerifyStatus) {
+        case kE_RX_VerifyStatusInit:
+        case kE_RX_VerifyStatusAgain:
         {
-            self.esqPwdViewStatus = kESQPwdViewStatusCountDown;
+            self.e_RX_VerifyStatus = kE_RX_VerifyStatusCountDown;
             [self.delegate sendAgainInRXVerifyButton:self];
         }
             break;
-        case kESQPwdViewStatusCountDown:
+        case kE_RX_VerifyStatusCountDown:
             // 几乎不可能
             break;
-        case kESQPwdViewStatusOK:
+        case kE_RX_VerifyStatusOK:
         default:
             [self.delegate okFuncInRXVerifyButton:self];
             break;
@@ -148,16 +148,16 @@
     if (remainTime == 0) {
         [self stopTimer];
         self.usedTime = 0;
-        switch (self.esqPwdViewStatus) {
-            case kESQPwdViewStatusOK:
+        switch (self.e_RX_VerifyStatus) {
+            case kE_RX_VerifyStatusOK:
                 // Do Nothing
                 // 上一次是倒计时的话,把上一次改成再次发送
-                if (self.esqLastPwdViewStatus == kESQPwdViewStatusCountDown) {
-                    self.esqLastPwdViewStatus = kESQPwdViewStatusAgain;
+                if (self.last_E_RX_VerifyStatus == kE_RX_VerifyStatusCountDown) {
+                    self.last_E_RX_VerifyStatus = kE_RX_VerifyStatusAgain;
                 }
                 break;
-            case kESQPwdViewStatusCountDown:
-                self.esqPwdViewStatus = kESQPwdViewStatusAgain;
+            case kE_RX_VerifyStatusCountDown:
+                self.e_RX_VerifyStatus = kE_RX_VerifyStatusAgain;
                 break;
             default:
                 break;
@@ -201,7 +201,7 @@
     self.maxTime = 60;
 #endif
     
-    self.esqPwdViewStatus = kESQPwdViewStatusInit;
+    self.e_RX_VerifyStatus = kE_RX_VerifyStatusInit;
 }
 
 

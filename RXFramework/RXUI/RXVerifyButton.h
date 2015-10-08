@@ -12,12 +12,12 @@
 
 
 
-typedef enum ESQPwdViewStatus {
-    kESQPwdViewStatusInit           =       0, // 初始化
-    kESQPwdViewStatusCountDown      =       1, // 倒计时
-    kESQPwdViewStatusAgain          =       2, // 再发一次
-    kESQPwdViewStatusOK             =       3, // OKFunc // 当填充完验证码的时候自动发送
-}ESQPwdViewStatus;
+typedef enum E_RX_VerifyStatus {
+    kE_RX_VerifyStatusInit           =       0, // 初始化
+    kE_RX_VerifyStatusCountDown      =       1, // 倒计时
+    kE_RX_VerifyStatusAgain          =       2, // 再发一次
+    kE_RX_VerifyStatusOK             =       3, // OKFunc // 当填充完验证码的时候自动发送
+}E_RX_VerifyStatus;
 
 
 
@@ -32,7 +32,7 @@ typedef enum ESQPwdViewStatus {
 
 
 @interface RXVerifyButton : UIButton
-@property (nonatomic, assign) ESQPwdViewStatus esqPwdViewStatus;
+@property (nonatomic, assign) E_RX_VerifyStatus e_RX_VerifyStatus;
 @property (nonatomic, weak) id<RXVerifyButtonDelegate> delegate;
 
 
