@@ -7,6 +7,7 @@
 //
 
 #import "RXUserManager.h"
+#import "RXUser.h"
 
 #define RXUserManagerUser       @"com.rxUserManagerUser"
 @interface RXUserManager ()

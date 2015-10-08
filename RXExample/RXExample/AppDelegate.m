@@ -7,16 +7,38 @@
 //
 
 #import "AppDelegate.h"
+#import "MLNavigationController.h"
+
 
 @interface AppDelegate ()
+@property (nonatomic, strong) UINavigationController *mainNC;
 
 @end
 
 @implementation AppDelegate
 
+- (void)showMain
+{
+    UIViewController *vc1 = [UIViewController rx_vcWithString:@"wdpage://REMainViewController"];
+    self.mainNC = [[MLNavigationController alloc] initWithRootViewController:vc1];
+    self.mainNC.delegate = self;
+    
+    NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+                          NSForegroundColorAttributeName:UIColorFromRGB(0x969696)};
+    [self.mainNC.navigationBar setTitleTextAttributes:dic];
+    
+    self.window.rootViewController = self.mainNC;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self showMain];
+    
+    [self.window makeKeyAndVisible];
+
+
     return YES;
 }
 

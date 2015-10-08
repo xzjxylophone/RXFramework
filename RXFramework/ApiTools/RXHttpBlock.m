@@ -10,7 +10,6 @@
 
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPRequestOperationManager.h"
-#import "OpenUDID.h"
 #import "RXError.h"
 @interface RXHttpBlock ()
 @property (nonatomic, retain) AFHTTPRequestOperation *httpClient;
