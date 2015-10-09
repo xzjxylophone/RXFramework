@@ -27,7 +27,9 @@
 
 - (id)initWithResultString:(NSString *)str
 {
-    if (self = [super init]) {
+    NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+    if (self = [self initWithDictionary:dic]) {
     }
     return self;
 }
