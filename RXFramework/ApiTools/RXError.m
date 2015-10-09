@@ -13,7 +13,7 @@
 
 - (id)initWithCode:(int)code msg:(NSString *)msg
 {
-    NSString *domain = kRXErrorDomain;
+    NSString *domain = k_CS_RX_ErrorDomain;
     NSDictionary *userInfo = @{NSLocalizedDescriptionKey:msg};
     if (self = [super initWithDomain:domain code:code userInfo:userInfo]) {
         
@@ -23,8 +23,8 @@
 
 + (id)defaultError
 {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:kRXErrorText forKey:NSLocalizedDescriptionKey];
-    RXError *result = [[RXError alloc] initWithDomain:kRXErrorDomain code:kRXEErrorTypeNetError userInfo:userInfo];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:k_CS_RX_ErrorText forKey:NSLocalizedDescriptionKey];
+    RXError *result = [[RXError alloc] initWithDomain:k_CS_RX_ErrorDomain code:kE_RX_ErrorType_NetError userInfo:userInfo];
     return result;
 }
 

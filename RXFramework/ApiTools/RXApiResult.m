@@ -12,34 +12,22 @@
 
 - (BOOL)success
 {
-    return self.stateCode == kRXEErrorTypeNoError;
+    return self.stateCode == kE_RX_ErrorType_NoError;
 }
 - (void)setSuccessInfoWithMsg:(NSString *)msg
 {
     self.stateMsg = msg;
-    self.stateCode = kRXEErrorTypeNoError;
+    self.stateCode = kE_RX_ErrorType_NoError;
 }
 - (void)setFailedInfoWithMsg:(NSString *)msg
 {
     self.stateMsg = msg;
-    self.stateCode = kRXEErrorTypeOtherError;
+    self.stateCode = kE_RX_ErrorType_OtherError;
 }
 
 - (id)initWithResultString:(NSString *)str
 {
     if (self = [super init]) {
-        
-        NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
-
-        id errorno = [dic objectForKey:@"errno"];
-        if (errorno == nil) {
-            self.stateCode = 0;
-        } else {
-            int error = [errorno intValue];
-            self.stateCode = error;
-            self.stateMsg = [dic objectForKey:@"error"];
-        }
     }
     return self;
 }

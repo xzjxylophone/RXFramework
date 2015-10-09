@@ -10,10 +10,16 @@
 #import "RXError.h"
 @interface RXApiResult : NSObject
 
+
+// 是否成功
 @property (nonatomic, readonly) BOOL success;
 
-@property (nonatomic, assign) int stateCode;
+@property (nonatomic, assign) NSInteger stateCode;
 @property (nonatomic, copy) NSString *stateMsg;
+
+
+@property (nonatomic, strong) NSDictionary *dataDic;
+
 
 
 - (id)initWithResultString:(NSString *)str;

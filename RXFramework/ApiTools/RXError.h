@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#define kRXErrorText    @"网络错误"
-#define kRXErrorDomain @"com.lekan.error_domain"
+#define k_CS_RX_ErrorText    @"网络错误"
+#define k_CS_RX_ErrorDomain @"com.lekan.error_domain"
 
-typedef enum RXEErrorType {
-    kRXEErrorTypeNetError        =       -10000, // 网络错误
-    kRXEErrorTypeNoError         =       0,
-    kRXEErrorTypeOtherError      =       1000, // 其他错误
-    kRXEErrorTypeTokenExpired       =       9999, // 用户过期
-}RXEErrorType;
+typedef enum E_RX_ErrorType {
+    kE_RX_ErrorType_NetError        =       -10000, // 网络错误
+    kE_RX_ErrorType_NoError         =       0,
+    kE_RX_ErrorType_OtherError      =       1000, // 其他错误
+    kE_RX_ErrorType_TokenExpired       =       9999, // 用户过期
+}E_RX_ErrorType;
 
 
 @interface RXError : NSError
