@@ -32,6 +32,32 @@
     return self;
 }
 
+- (id)initWithData:(id)data
+{
+    if ([data isKindOfClass:[NSData class]]) {
+        NSData *tmp = data;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:tmp options:NSJSONReadingMutableLeaves error:nil];
+        if (self = [self initWithDictionary:dic]) {
+            
+        }
+    } else if ([data isKindOfClass:[NSString class]]) {
+        if (self = [self initWithResultString:data]) {
+            
+        }
+    } else {
+        if (self = [self init]) {
+            
+        }
+    }
+    return self;
+}
+- (id)initWithDictionary:(NSDictionary *)dic
+{
+    if (self = [self init]) {
+        
+    }
+    return self;
+}
 
 
 @end

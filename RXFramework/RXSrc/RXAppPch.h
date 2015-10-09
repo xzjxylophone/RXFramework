@@ -26,6 +26,7 @@
 #import "UILabel+RXUtility.h"
 #import "UIFont+RXUtility.h"
 #import "UIScrollView+RXUtility.h"
+#import "NSDictionary+RXUtility.h"
 
 
 

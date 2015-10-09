@@ -9,29 +9,27 @@
 #import <Foundation/Foundation.h>
 
 #import "AFNetworkReachabilityManager.h"
+
+#import "AFHTTPRequestOperation.h"
+#import "AFHTTPRequestOperationManager.h"
+@class RXApiResult;
 @interface RXHttpBlock : NSObject
 
-@property(nonatomic,assign) BOOL isCancelledParse;
 
+@property (nonatomic, strong) AFHTTPRequestOperation *httpOperation;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *httpOperationManager;
 
-
-
-+ (RXHttpBlock *)queryCarListWithSuccess:(void (^)(RXHttpBlock *http, id content))success failure:(void (^)(NSError *error))failure;
-
-
-+ (RXHttpBlock *)sendVerifyCodeWithMobile:(NSString *)mobile success:(void (^)(RXHttpBlock *http, id content))success failure:(void (^)(NSError *error))failure;
-
-+ (RXHttpBlock *)loginWithMobile:(NSString *)mobile code:(NSString *)code success:(void (^)(RXHttpBlock *http, id content))success failure:(void (^)(NSError *error))failure;
-
-
-+ (RXHttpBlock *)getCarDetailWithCarId:(NSString *)carId success:(void (^)(RXHttpBlock *http, id content))success failure:(void (^)(NSError *error))failure;
+// Demo
++ (RXHttpBlock *)queryCarListWithBlock:(void (^)(RXHttpBlock *http, RXApiResult *apiResult, NSError *error))block;
 
 
 
 
 
+#pragma mark - Get Post Method
+- (void)GETWithUrl:(NSString *)url parameters:(NSDictionary *)parameters block:(void (^)(id contentObject, NSError *error))block;
 
-
+- (void)POSTWithUrl:(NSString *)url parameters:(NSDictionary *)parameters block:(void (^)(id contentObject, NSError *error))block;
 
 
 

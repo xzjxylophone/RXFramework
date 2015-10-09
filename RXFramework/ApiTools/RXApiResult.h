@@ -23,6 +23,8 @@
 
 
 - (id)initWithResultString:(NSString *)str;
+- (id)initWithData:(id)data;
+- (id)initWithDictionary:(NSDictionary *)dic;
 
 
 

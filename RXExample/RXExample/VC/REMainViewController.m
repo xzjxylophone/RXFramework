@@ -7,7 +7,7 @@
 //
 
 #import "REMainViewController.h"
-
+#import "RXHttpBlock.h"
 @interface REMainViewController ()
 
 @end
@@ -20,6 +20,11 @@
     
     
     self.view.backgroundColor = [UIColor redColor];
+    
+    [RXHttpBlock queryCarListWithBlock:^(RXHttpBlock *http, id contentObject, NSError *error) {
+        NSLog(@"contentObj:%@, error:%@", contentObject, error);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
