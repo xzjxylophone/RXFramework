@@ -14,7 +14,6 @@
 
 
 #import "RXDefine.h"
-#import "RXUserManager.h"
 
 #pragma mark - Category
 #import "NSURL+RXUtility.h"
@@ -55,6 +54,8 @@
 #import "RXTableViewCell.h"
 
 
+#pragma mark - Manager
+#import "RXUserManager.h"
 #import "RXManager.h"
 #import "RXPushTokenManager.h"
 #import "RXShareManager.h"

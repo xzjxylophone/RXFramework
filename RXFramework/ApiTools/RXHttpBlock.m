@@ -31,7 +31,7 @@
                           @"pageNo":@"0"};
     RXHttpBlock *http = [[RXHttpBlock alloc] init];
     [http POSTWithUrl:hostUrl parameters:dic block:^(id contentObject, NSError *error) {
-        RXApiResult *result = [[RXApiResult alloc] initWithResultString:contentObject];
+        RXApiResult *result = [[RXApiResult alloc] initWithData:contentObject];
         if (block != nil) {
             block(http, result, error);
         }

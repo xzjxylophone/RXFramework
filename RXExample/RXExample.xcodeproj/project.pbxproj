@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		587B2E721BC7B01A00162929 /* RXSKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 587B2E711BC7B01A00162929 /* RXSKey.m */; settings = {ASSET_TAGS = (); }; };
 		587B2E751BC7C1D400162929 /* NSDictionary+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 587B2E741BC7C1D400162929 /* NSDictionary+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
+		58C43B701BCA890D002727DF /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6D1BCA890D002727DF /* RXUser.m */; settings = {ASSET_TAGS = (); }; };
+		58C43B711BCA890D002727DF /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6F1BCA890D002727DF /* RXUserManager.m */; settings = {ASSET_TAGS = (); }; };
+		58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B731BCA892F002727DF /* RXTVSectionItem.m */; settings = {ASSET_TAGS = (); }; };
 		58C8EC181BC64B59008AFC3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC171BC64B59008AFC3A /* main.m */; };
 		58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC1A1BC64B59008AFC3A /* AppDelegate.m */; };
 		58C8EC231BC64B59008AFC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C8EC221BC64B59008AFC3A /* Assets.xcassets */; };
@@ -31,8 +34,6 @@
 		58C8ECA31BC65BD7008AFC3A /* UIScrollView+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC5A1BC65BD7008AFC3A /* UIScrollView+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECA41BC65BD7008AFC3A /* UIView+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC5C1BC65BD7008AFC3A /* UIView+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECA61BC65BD7008AFC3A /* RXDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC601BC65BD7008AFC3A /* RXDefine.m */; settings = {ASSET_TAGS = (); }; };
-		58C8ECA71BC65BD7008AFC3A /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC631BC65BD7008AFC3A /* RXTVSectionItem.m */; settings = {ASSET_TAGS = (); }; };
-		58C8ECA81BC65BD7008AFC3A /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC651BC65BD7008AFC3A /* RXUserManager.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECAA1BC65BD7008AFC3A /* RXFunctionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC6B1BC65BD7008AFC3A /* RXFunctionItem.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECAB1BC65BD7008AFC3A /* RXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC6D1BC65BD7008AFC3A /* RXUtils.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECAC1BC65BD7008AFC3A /* RXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC701BC65BD7008AFC3A /* RXGuideViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -53,7 +54,6 @@
 		58C8ECBE1BC65C30008AFC3A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58C8ECBD1BC65C30008AFC3A /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 		58C8ECC21BC65C57008AFC3A /* REMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8ECC01BC65C57008AFC3A /* REMainViewController.m */; settings = {ASSET_TAGS = (); }; };
 		58C8ECC31BC65C57008AFC3A /* REMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C8ECC11BC65C57008AFC3A /* REMainViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		58C8ECC71BC65E14008AFC3A /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8ECC61BC65E14008AFC3A /* RXUser.m */; settings = {ASSET_TAGS = (); }; };
 		D5C7898C02CD6A1240CCB94F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF8E7620DD010572B708C03 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +63,12 @@
 		587B2E711BC7B01A00162929 /* RXSKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSKey.m; sourceTree = "<group>"; };
 		587B2E731BC7C1D400162929 /* NSDictionary+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXUtility.h"; sourceTree = "<group>"; };
 		587B2E741BC7C1D400162929 /* NSDictionary+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXUtility.m"; sourceTree = "<group>"; };
+		58C43B6C1BCA890D002727DF /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
+		58C43B6D1BCA890D002727DF /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
+		58C43B6E1BCA890D002727DF /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
+		58C43B6F1BCA890D002727DF /* RXUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUserManager.m; sourceTree = "<group>"; };
+		58C43B721BCA892F002727DF /* RXTVSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTVSectionItem.h; sourceTree = "<group>"; };
+		58C43B731BCA892F002727DF /* RXTVSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTVSectionItem.m; sourceTree = "<group>"; };
 		58C8EC131BC64B59008AFC3A /* RXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C8EC171BC64B59008AFC3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58C8EC191BC64B59008AFC3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,10 +113,6 @@
 		58C8EC5C1BC65BD7008AFC3A /* UIView+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RXUtility.m"; sourceTree = "<group>"; };
 		58C8EC5F1BC65BD7008AFC3A /* RXDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDefine.h; sourceTree = "<group>"; };
 		58C8EC601BC65BD7008AFC3A /* RXDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDefine.m; sourceTree = "<group>"; };
-		58C8EC621BC65BD7008AFC3A /* RXTVSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTVSectionItem.h; sourceTree = "<group>"; };
-		58C8EC631BC65BD7008AFC3A /* RXTVSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTVSectionItem.m; sourceTree = "<group>"; };
-		58C8EC641BC65BD7008AFC3A /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
-		58C8EC651BC65BD7008AFC3A /* RXUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUserManager.m; sourceTree = "<group>"; };
 		58C8EC6A1BC65BD7008AFC3A /* RXFunctionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXFunctionItem.h; sourceTree = "<group>"; };
 		58C8EC6B1BC65BD7008AFC3A /* RXFunctionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXFunctionItem.m; sourceTree = "<group>"; };
 		58C8EC6C1BC65BD7008AFC3A /* RXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUtils.h; sourceTree = "<group>"; };
@@ -149,8 +151,6 @@
 		58C8ECC01BC65C57008AFC3A /* REMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMainViewController.m; sourceTree = "<group>"; };
 		58C8ECC11BC65C57008AFC3A /* REMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REMainViewController.xib; sourceTree = "<group>"; };
 		58C8ECC41BC65D05008AFC3A /* RXExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXExample-Prefix.pch"; sourceTree = "<group>"; };
-		58C8ECC51BC65E14008AFC3A /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
-		58C8ECC61BC65E14008AFC3A /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
 		60A3373FF7059978A0EF93E7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E8E1E8BBCF1BB3A150EA4C7D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +247,10 @@
 		58C8EC351BC65BD7008AFC3A /* RXManager */ = {
 			isa = PBXGroup;
 			children = (
+				58C43B6C1BCA890D002727DF /* RXUser.h */,
+				58C43B6D1BCA890D002727DF /* RXUser.m */,
+				58C43B6E1BCA890D002727DF /* RXUserManager.h */,
+				58C43B6F1BCA890D002727DF /* RXUserManager.m */,
 				58C8EC361BC65BD7008AFC3A /* RXManager.h */,
 				58C8EC371BC65BD7008AFC3A /* RXManager.m */,
 				58C8EC381BC65BD7008AFC3A /* RXPushTokenManager.h */,
@@ -266,7 +270,6 @@
 				58C8EC441BC65BD7008AFC3A /* RXCategory */,
 				58C8EC5F1BC65BD7008AFC3A /* RXDefine.h */,
 				58C8EC601BC65BD7008AFC3A /* RXDefine.m */,
-				58C8EC611BC65BD7008AFC3A /* RXModel */,
 				58C8EC661BC65BD7008AFC3A /* RXTool */,
 				58C8EC6C1BC65BD7008AFC3A /* RXUtils.h */,
 				58C8EC6D1BC65BD7008AFC3A /* RXUtils.m */,
@@ -314,22 +317,11 @@
 			path = RXCategory;
 			sourceTree = "<group>";
 		};
-		58C8EC611BC65BD7008AFC3A /* RXModel */ = {
-			isa = PBXGroup;
-			children = (
-				58C8EC621BC65BD7008AFC3A /* RXTVSectionItem.h */,
-				58C8EC631BC65BD7008AFC3A /* RXTVSectionItem.m */,
-				58C8EC641BC65BD7008AFC3A /* RXUserManager.h */,
-				58C8EC651BC65BD7008AFC3A /* RXUserManager.m */,
-				58C8ECC51BC65E14008AFC3A /* RXUser.h */,
-				58C8ECC61BC65E14008AFC3A /* RXUser.m */,
-			);
-			path = RXModel;
-			sourceTree = "<group>";
-		};
 		58C8EC661BC65BD7008AFC3A /* RXTool */ = {
 			isa = PBXGroup;
 			children = (
+				58C43B721BCA892F002727DF /* RXTVSectionItem.h */,
+				58C43B731BCA892F002727DF /* RXTVSectionItem.m */,
 				58C8EC6A1BC65BD7008AFC3A /* RXFunctionItem.h */,
 				58C8EC6B1BC65BD7008AFC3A /* RXFunctionItem.m */,
 			);
@@ -519,8 +511,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C43B701BCA890D002727DF /* RXUser.m in Sources */,
+				58C43B711BCA890D002727DF /* RXUserManager.m in Sources */,
 				58C8EC911BC65BD7008AFC3A /* RXError.m in Sources */,
-				58C8ECA81BC65BD7008AFC3A /* RXUserManager.m in Sources */,
 				58C8EC941BC65BD7008AFC3A /* RXPushTokenManager.m in Sources */,
 				58C8ECB91BC65BD7008AFC3A /* RXImageTextButton.m in Sources */,
 				58C8ECB71BC65BD7008AFC3A /* RXDatePickerView.m in Sources */,
@@ -530,8 +523,6 @@
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				58C8EC9D1BC65BD7008AFC3A /* UIColor+RXUtility.m in Sources */,
 				58C8ECBB1BC65BD7008AFC3A /* RXVerifyButton.m in Sources */,
-				58C8ECA71BC65BD7008AFC3A /* RXTVSectionItem.m in Sources */,
-				58C8ECC71BC65E14008AFC3A /* RXUser.m in Sources */,
 				58C8ECB51BC65BD7008AFC3A /* RXActionSheetView.m in Sources */,
 				58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */,
 				58C8EC9C1BC65BD7008AFC3A /* NSURL+RXUtility.m in Sources */,
@@ -539,6 +530,7 @@
 				58C8EC9E1BC65BD7008AFC3A /* UIFont+RXUtility.m in Sources */,
 				58C8EC981BC65BD7008AFC3A /* RXAppPch.m in Sources */,
 				58C8EC931BC65BD7008AFC3A /* RXManager.m in Sources */,
+				58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */,
 				58C8ECA61BC65BD7008AFC3A /* RXDefine.m in Sources */,
 				58C8ECB31BC65BD7008AFC3A /* UIRXSDKWebViewController.m in Sources */,
 				58C8ECB11BC65BD7008AFC3A /* RXSDKConfigManager.m in Sources */,

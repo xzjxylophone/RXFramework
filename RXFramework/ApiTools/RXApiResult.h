@@ -22,7 +22,7 @@
 
 
 
-- (id)initWithResultString:(NSString *)str;
+- (id)initWithString:(NSString *)str;
 - (id)initWithData:(id)data;
 - (id)initWithDictionary:(NSDictionary *)dic;
 

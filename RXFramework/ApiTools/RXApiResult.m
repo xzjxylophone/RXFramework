@@ -25,7 +25,7 @@
     self.stateCode = kE_RX_ErrorType_OtherError;
 }
 
-- (id)initWithResultString:(NSString *)str
+- (id)initWithString:(NSString *)str
 {
     NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
@@ -43,7 +43,7 @@
             
         }
     } else if ([data isKindOfClass:[NSString class]]) {
-        if (self = [self initWithResultString:data]) {
+        if (self = [self initWithString:data]) {
             
         }
     } else {
