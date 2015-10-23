@@ -28,5 +28,8 @@
 
 - (NSString *)rx_transformToPinyin;
 
+// 得到一个对象, 如果是字符串的长度是否为0,如果为0,返回空字符串
++ (NSString *)rx_validStringWithObj:(id)obj;
+
 
 @end

@@ -25,7 +25,7 @@ typedef enum E_RX_VerifyStatus {
 
 @protocol RXVerifyButtonDelegate <NSObject>
 
-- (void)sendAgainInRXVerifyButton:(RXVerifyButton *)rxVB;
+- (BOOL)sendAgainInRXVerifyButton:(RXVerifyButton *)rxVB;
 - (void)okFuncInRXVerifyButton:(RXVerifyButton *)rxVB;
 
 @end

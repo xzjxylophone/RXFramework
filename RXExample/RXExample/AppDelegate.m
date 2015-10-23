@@ -34,6 +34,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self showMain];
+    [RXManager testInfoPlist];
     
     [self.window makeKeyAndVisible];
 

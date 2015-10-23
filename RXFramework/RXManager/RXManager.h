@@ -43,9 +43,11 @@
 + (NSString *)stringWeiXinURLScheme;
 + (NSString *)stringSinaURLScheme;
 
-#pragma mark - app version
-- (NSString *)appVersion;
-- (NSString *)appBuild;
+#pragma mark - info.plist
++ (void)testInfoPlist;
+
++ (NSString *)appVersion;
++ (NSString *)appBuild;
 
 
 

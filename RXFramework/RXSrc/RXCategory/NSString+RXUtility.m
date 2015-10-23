@@ -100,7 +100,18 @@
     result = [result stringByReplacingOccurrencesOfString:@" " withString:@""];
     return result;
 }
-
++ (NSString *)rx_validStringWithObj:(id)obj
+{
+    if ([obj isKindOfClass:[NSString class]]) {
+        NSString *tmp = obj;
+        return tmp.length > 0 ? tmp : @"";
+    } else if ([obj isKindOfClass:[NSNull class]]) {
+        return @"";
+    } else {
+        NSString *result = [NSString stringWithFormat:@"%@", obj];
+        return result;
+    }
+}
 
 
 @end

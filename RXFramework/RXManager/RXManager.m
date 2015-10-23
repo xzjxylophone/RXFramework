@@ -72,8 +72,21 @@
 }
 
 
-#pragma mark - app version
-- (NSString *)appVersion
+#pragma mark - info.plist
+
++ (void)testInfoPlist
+{
+    
+    // https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1
+    
+    // info.plist key introduction
+    NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
+
+    NSLog(@"plistDic:%@", plistDic);
+}
+
+
++ (NSString *)appVersion
 {
     
     NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
@@ -81,7 +94,7 @@
     return result;
     
 }
-- (NSString *)appBuild
++ (NSString *)appBuild
 {
     NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
     NSString *result = plistDic[@"CFBundleVersion"];
@@ -257,9 +270,14 @@
 
 
 #pragma mark - Guide
+- (NSString *)startGuideKey
+{
+    NSString *key = [NSString stringWithFormat:@"%@%@", [RXManager appVersion], [RXManager appBuild]];
+    return key;
+}
 - (BOOL)firstStartGuideValue
 {
-    NSString *key = [NSString stringWithFormat:@"%@%@", [self appVersion], [self appBuild]];
+    NSString *key = [self startGuideKey];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     id value = [ud objectForKey:key];
     if (value == nil) {
@@ -270,7 +288,7 @@
 }
 - (void)setFirstStartGuideValue:(BOOL)value
 {
-    NSString *key = [NSString stringWithFormat:@"%@%@", [self appVersion], [self appBuild]];
+    NSString *key = [self startGuideKey];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:@(value) forKey:key];
     [ud synchronize];

@@ -127,12 +127,17 @@
         case kE_RX_VerifyStatusInit:
         case kE_RX_VerifyStatusAgain:
         {
-            self.e_RX_VerifyStatus = kE_RX_VerifyStatusCountDown;
-            [self.delegate sendAgainInRXVerifyButton:self];
+            BOOL result = [self.delegate sendAgainInRXVerifyButton:self];
+            if (result) {
+                self.e_RX_VerifyStatus = kE_RX_VerifyStatusCountDown;
+            } else {
+                // Do Nothing
+            }
         }
             break;
         case kE_RX_VerifyStatusCountDown:
             // 几乎不可能
+            // 在倒计时的状态的时候,是不可以点击此按钮的
             break;
         case kE_RX_VerifyStatusOK:
         default:
