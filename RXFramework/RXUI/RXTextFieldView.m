@@ -25,11 +25,9 @@
 
 - (void)updateWithLeftPadding:(CGFloat)leftPadding
 {
+    UIEdgeInsets padding = UIEdgeInsetsMake(0, leftPadding, 0, leftPadding);
     [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset(0);
-        make.bottom.equalTo(self.mas_bottom).offset(0);
-        make.left.equalTo(self.mas_left).offset(leftPadding);
-        make.right.equalTo(self.mas_right).offset(-leftPadding);
+        make.edges.equalTo(self).width.insets(padding);
     }];
 }
 
