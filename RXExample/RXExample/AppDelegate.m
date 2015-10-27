@@ -26,6 +26,12 @@
     NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19]};
     [self.mainNC.navigationBar setTitleTextAttributes:dic];
     
+//    self.mainNC.navigationBar.barStyle = UIBarStyleBlack;
+//    self.mainNC.navigationBar.translucent = NO;
+    
+//    UIImage *bgImage = [[UIColor rx_colorWithString:@"#87cee0"] rx_imageWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 64)];
+//    [self.mainNC.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+    
     self.window.rootViewController = self.mainNC;
 }
 

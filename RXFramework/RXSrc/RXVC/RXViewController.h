@@ -13,4 +13,9 @@
 @property (nonatomic, strong) UIBarButtonItem *bbiBack;
 - (void)bbiBackAction:(id)sender;
 
+
+#pragma mark - initialize UI And Data
+- (void)initializeUIAndData;
+- (void)initializeAction;
+
 @end

@@ -18,6 +18,21 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+/*
+#pragma mark - initialize UI And Data
+- (void)initializeUIAndData
+{
+    [super initializeUIAndData];
+}
+- (void)initializeAction
+{
+    [super initializeAction];
+}
+
+*/
+
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
@@ -28,6 +43,7 @@
     
 }
 
+#pragma mark - Property
 - (UIBarButtonItem *)bbiBack
 {
     if (_bbiBack == nil) {
@@ -37,6 +53,13 @@
 }
 
 
+#pragma mark - Override
+
+#ifdef __IPHONE_7_0
+- (UIRectEdge)edgesForExtendedLayout {
+    return UIRectEdgeNone;
+}
+#endif
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {

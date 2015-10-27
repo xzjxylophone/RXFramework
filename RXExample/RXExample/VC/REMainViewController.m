@@ -8,7 +8,13 @@
 
 #import "REMainViewController.h"
 #import "RXHttpBlock.h"
+
+#import "RXLabelView.h"
 @interface REMainViewController ()
+@property (weak, nonatomic) IBOutlet RXLabelView *rxLabelView;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lbl;
 
 @end
 
@@ -18,8 +24,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.lbl.backgroundColor = [UIColor redColor];
+    self.lbl.text = @"我们一起来测试";
+
+    NSLog(@"self.view:%@, self.label:%@", self.view, self.lbl);
     
-    self.view.backgroundColor = [UIColor redColor];
+    
+    
+    [self.rxLabelView updateWithLeftPadding:10];
+    self.rxLabelView.lbl.backgroundColor = [UIColor blueColor];
     
     [RXHttpBlock queryCarListWithBlock:^(RXHttpBlock *http, id contentObject, NSError *error) {
         NSLog(@"contentObj:%@, error:%@", contentObject, error);

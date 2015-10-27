@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		587B2E721BC7B01A00162929 /* RXSKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 587B2E711BC7B01A00162929 /* RXSKey.m */; settings = {ASSET_TAGS = (); }; };
 		587B2E751BC7C1D400162929 /* NSDictionary+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 587B2E741BC7C1D400162929 /* NSDictionary+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
+		589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D85081BDE105300DF9D6A /* RXTextFieldView.m */; settings = {ASSET_TAGS = (); }; };
+		589D850C1BDE176400DF9D6A /* RXTextViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850B1BDE176400DF9D6A /* RXTextViewView.m */; settings = {ASSET_TAGS = (); }; };
+		589D850F1BDE1B7900DF9D6A /* RXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850E1BDE1B7900DF9D6A /* RXTextView.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B701BCA890D002727DF /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6D1BCA890D002727DF /* RXUser.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B711BCA890D002727DF /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6F1BCA890D002727DF /* RXUserManager.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B731BCA892F002727DF /* RXTVSectionItem.m */; settings = {ASSET_TAGS = (); }; };
+		58C7BF461BDA1D0A00DFE83A /* RXConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
+		58C7BF471BDA1D0A00DFE83A /* RXConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		58C7BF4A1BDA1F6900DFE83A /* RXLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C7BF491BDA1F6900DFE83A /* RXLabelView.m */; settings = {ASSET_TAGS = (); }; };
 		58C8EC181BC64B59008AFC3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC171BC64B59008AFC3A /* main.m */; };
 		58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC1A1BC64B59008AFC3A /* AppDelegate.m */; };
 		58C8EC231BC64B59008AFC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C8EC221BC64B59008AFC3A /* Assets.xcassets */; };
@@ -63,12 +69,23 @@
 		587B2E711BC7B01A00162929 /* RXSKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSKey.m; sourceTree = "<group>"; };
 		587B2E731BC7C1D400162929 /* NSDictionary+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXUtility.h"; sourceTree = "<group>"; };
 		587B2E741BC7C1D400162929 /* NSDictionary+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXUtility.m"; sourceTree = "<group>"; };
+		589D85071BDE105300DF9D6A /* RXTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextFieldView.h; sourceTree = "<group>"; };
+		589D85081BDE105300DF9D6A /* RXTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTextFieldView.m; sourceTree = "<group>"; };
+		589D850A1BDE176400DF9D6A /* RXTextViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextViewView.h; sourceTree = "<group>"; };
+		589D850B1BDE176400DF9D6A /* RXTextViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTextViewView.m; sourceTree = "<group>"; };
+		589D850D1BDE1B7900DF9D6A /* RXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextView.h; sourceTree = "<group>"; };
+		589D850E1BDE1B7900DF9D6A /* RXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTextView.m; sourceTree = "<group>"; };
 		58C43B6C1BCA890D002727DF /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
 		58C43B6D1BCA890D002727DF /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
 		58C43B6E1BCA890D002727DF /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
 		58C43B6F1BCA890D002727DF /* RXUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUserManager.m; sourceTree = "<group>"; };
 		58C43B721BCA892F002727DF /* RXTVSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTVSectionItem.h; sourceTree = "<group>"; };
 		58C43B731BCA892F002727DF /* RXTVSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTVSectionItem.m; sourceTree = "<group>"; };
+		58C7BF431BDA1D0A00DFE83A /* RXConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXConfigViewController.h; sourceTree = "<group>"; };
+		58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXConfigViewController.m; sourceTree = "<group>"; };
+		58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXConfigViewController.xib; sourceTree = "<group>"; };
+		58C7BF481BDA1F6900DFE83A /* RXLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLabelView.h; sourceTree = "<group>"; };
+		58C7BF491BDA1F6900DFE83A /* RXLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLabelView.m; sourceTree = "<group>"; };
 		58C8EC131BC64B59008AFC3A /* RXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C8EC171BC64B59008AFC3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58C8EC191BC64B59008AFC3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -338,6 +355,9 @@
 				58C8EC731BC65BD7008AFC3A /* RXListViewController.m */,
 				58C8EC741BC65BD7008AFC3A /* RXViewController.h */,
 				58C8EC751BC65BD7008AFC3A /* RXViewController.m */,
+				58C7BF431BDA1D0A00DFE83A /* RXConfigViewController.h */,
+				58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */,
+				58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */,
 			);
 			path = RXVC;
 			sourceTree = "<group>";
@@ -374,6 +394,14 @@
 				58C8EC8D1BC65BD7008AFC3A /* RXPageControl.m */,
 				58C8EC8E1BC65BD7008AFC3A /* RXVerifyButton.h */,
 				58C8EC8F1BC65BD7008AFC3A /* RXVerifyButton.m */,
+				58C7BF481BDA1F6900DFE83A /* RXLabelView.h */,
+				58C7BF491BDA1F6900DFE83A /* RXLabelView.m */,
+				589D85071BDE105300DF9D6A /* RXTextFieldView.h */,
+				589D85081BDE105300DF9D6A /* RXTextFieldView.m */,
+				589D850A1BDE176400DF9D6A /* RXTextViewView.h */,
+				589D850B1BDE176400DF9D6A /* RXTextViewView.m */,
+				589D850D1BDE1B7900DF9D6A /* RXTextView.h */,
+				589D850E1BDE1B7900DF9D6A /* RXTextView.m */,
 			);
 			path = RXUI;
 			sourceTree = "<group>";
@@ -467,6 +495,7 @@
 				58C8ECC31BC65C57008AFC3A /* REMainViewController.xib in Resources */,
 				58C8EC231BC64B59008AFC3A /* Assets.xcassets in Resources */,
 				58C8ECAD1BC65BD7008AFC3A /* RXGuideViewController.xib in Resources */,
+				58C7BF471BDA1D0A00DFE83A /* RXConfigViewController.xib in Resources */,
 				58C8ECBE1BC65C30008AFC3A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +544,7 @@
 				58C43B711BCA890D002727DF /* RXUserManager.m in Sources */,
 				58C8EC911BC65BD7008AFC3A /* RXError.m in Sources */,
 				58C8EC941BC65BD7008AFC3A /* RXPushTokenManager.m in Sources */,
+				58C7BF4A1BDA1F6900DFE83A /* RXLabelView.m in Sources */,
 				58C8ECB91BC65BD7008AFC3A /* RXImageTextButton.m in Sources */,
 				58C8ECB71BC65BD7008AFC3A /* RXDatePickerView.m in Sources */,
 				58C8EC921BC65BD7008AFC3A /* RXHttpBlock.m in Sources */,
@@ -522,9 +552,12 @@
 				58C8ECA01BC65BD7008AFC3A /* UIImage+RXUtility.m in Sources */,
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				58C8EC9D1BC65BD7008AFC3A /* UIColor+RXUtility.m in Sources */,
+				589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */,
 				58C8ECBB1BC65BD7008AFC3A /* RXVerifyButton.m in Sources */,
 				58C8ECB51BC65BD7008AFC3A /* RXActionSheetView.m in Sources */,
 				58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */,
+				58C7BF461BDA1D0A00DFE83A /* RXConfigViewController.m in Sources */,
+				589D850F1BDE1B7900DF9D6A /* RXTextView.m in Sources */,
 				58C8EC9C1BC65BD7008AFC3A /* NSURL+RXUtility.m in Sources */,
 				58C8EC961BC65BD7008AFC3A /* RXTableViewCell.m in Sources */,
 				58C8EC9E1BC65BD7008AFC3A /* UIFont+RXUtility.m in Sources */,
@@ -534,6 +567,7 @@
 				58C8ECA61BC65BD7008AFC3A /* RXDefine.m in Sources */,
 				58C8ECB31BC65BD7008AFC3A /* UIRXSDKWebViewController.m in Sources */,
 				58C8ECB11BC65BD7008AFC3A /* RXSDKConfigManager.m in Sources */,
+				589D850C1BDE176400DF9D6A /* RXTextViewView.m in Sources */,
 				58C8ECA21BC65BD7008AFC3A /* UINavigationController+RXUtility.m in Sources */,
 				58C8ECC21BC65C57008AFC3A /* REMainViewController.m in Sources */,
 				58C8ECA11BC65BD7008AFC3A /* UILabel+RXUtility.m in Sources */,
