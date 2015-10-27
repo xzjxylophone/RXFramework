@@ -11,6 +11,9 @@
 
 // 类似于  IQTextView
 
+
+// 带有默认字符的
+
 @interface RXTextView : UITextView
 @property (nonatomic,copy) NSString *placeholder;
 

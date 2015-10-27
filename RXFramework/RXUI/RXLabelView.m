@@ -33,6 +33,7 @@
         make.left.equalTo(self.mas_left).offset(leftPadding);
         make.right.equalTo(self.mas_right).offset(-leftPadding);
     }];
+    
 }
 
 
