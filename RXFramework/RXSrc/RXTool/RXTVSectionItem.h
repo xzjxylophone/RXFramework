@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSArray *items;
 
 // 有可能是字符串,view等等
-@property (nonatomic, strong) id data;
+@property (nonatomic, strong) id object;
 
 @end

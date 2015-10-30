@@ -108,6 +108,14 @@
     return result;
 }
 
+
++ (NSString *)appBundleName
+{
+    NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
+    NSString *result = plistDic[@"CFBundleName"];
+    return result;
+}
+
 #pragma mark - Device Info
 + (void)testDeviceInfo
 {

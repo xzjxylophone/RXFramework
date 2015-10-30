@@ -11,7 +11,7 @@
 
 
 
-@interface RXConfigViewController : RXViewController
+@interface RXConfigViewController : RXViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) NSArray *functionItems;

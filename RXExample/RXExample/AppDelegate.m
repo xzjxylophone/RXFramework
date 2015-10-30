@@ -19,7 +19,7 @@
 
 - (void)showMain
 {
-    UIViewController *vc1 = [UIViewController rx_vcWithString:@"wdpage://REMainViewController"];
+    UIViewController *vc1 = [UIViewController rx_vcWithString:@"rxpage://REMainViewController"];
     self.mainNC = [[RXNavigationController alloc] initWithRootViewController:vc1];
     self.mainNC.delegate = self;
     

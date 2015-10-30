@@ -24,11 +24,13 @@
 		589D850F1BDE1B7900DF9D6A /* RXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850E1BDE1B7900DF9D6A /* RXTextView.m */; settings = {ASSET_TAGS = (); }; };
 		589D85121BDF0BDA00DF9D6A /* RXIvLblView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D85111BDF0BDA00DF9D6A /* RXIvLblView.m */; settings = {ASSET_TAGS = (); }; };
 		58A160431BE30B60004E313A /* RXDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160421BE30B60004E313A /* RXDataProvider.m */; settings = {ASSET_TAGS = (); }; };
+		58A160461BE351DE004E313A /* REConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160451BE351DE004E313A /* REConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
+		58A160491BE35652004E313A /* RXConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160481BE35652004E313A /* RXConfigCell.m */; settings = {ASSET_TAGS = (); }; };
+		58A91D8A1BE367A800F55465 /* UIDevice+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B701BCA890D002727DF /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6D1BCA890D002727DF /* RXUser.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B711BCA890D002727DF /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6F1BCA890D002727DF /* RXUserManager.m */; settings = {ASSET_TAGS = (); }; };
 		58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B731BCA892F002727DF /* RXTVSectionItem.m */; settings = {ASSET_TAGS = (); }; };
 		58C7BF461BDA1D0A00DFE83A /* RXConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
-		58C7BF471BDA1D0A00DFE83A /* RXConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		58C7BF4A1BDA1F6900DFE83A /* RXLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C7BF491BDA1F6900DFE83A /* RXLabelView.m */; settings = {ASSET_TAGS = (); }; };
 		58C8EC181BC64B59008AFC3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC171BC64B59008AFC3A /* main.m */; };
 		58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC1A1BC64B59008AFC3A /* AppDelegate.m */; };
@@ -102,6 +104,12 @@
 		589D85111BDF0BDA00DF9D6A /* RXIvLblView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXIvLblView.m; sourceTree = "<group>"; };
 		58A160411BE30B60004E313A /* RXDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataProvider.h; sourceTree = "<group>"; };
 		58A160421BE30B60004E313A /* RXDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataProvider.m; sourceTree = "<group>"; };
+		58A160441BE351DE004E313A /* REConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REConfigViewController.h; sourceTree = "<group>"; };
+		58A160451BE351DE004E313A /* REConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REConfigViewController.m; sourceTree = "<group>"; };
+		58A160471BE35652004E313A /* RXConfigCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXConfigCell.h; sourceTree = "<group>"; };
+		58A160481BE35652004E313A /* RXConfigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXConfigCell.m; sourceTree = "<group>"; };
+		58A91D881BE367A800F55465 /* UIDevice+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RXUtility.h"; sourceTree = "<group>"; };
+		58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RXUtility.m"; sourceTree = "<group>"; };
 		58C43B6C1BCA890D002727DF /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
 		58C43B6D1BCA890D002727DF /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
 		58C43B6E1BCA890D002727DF /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
@@ -110,7 +118,6 @@
 		58C43B731BCA892F002727DF /* RXTVSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTVSectionItem.m; sourceTree = "<group>"; };
 		58C7BF431BDA1D0A00DFE83A /* RXConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXConfigViewController.h; sourceTree = "<group>"; };
 		58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXConfigViewController.m; sourceTree = "<group>"; };
-		58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXConfigViewController.xib; sourceTree = "<group>"; };
 		58C7BF481BDA1F6900DFE83A /* RXLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLabelView.h; sourceTree = "<group>"; };
 		58C7BF491BDA1F6900DFE83A /* RXLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLabelView.m; sourceTree = "<group>"; };
 		58C8EC131BC64B59008AFC3A /* RXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +223,8 @@
 				5837E2221BDF168A00331760 /* UIScrollView+RXUtility.m */,
 				5837E2231BDF168A00331760 /* UIView+RXUtility.h */,
 				5837E2241BDF168A00331760 /* UIView+RXUtility.m */,
+				58A91D881BE367A800F55465 /* UIDevice+RXUtility.h */,
+				58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */,
 			);
 			path = RXiOS;
 			sourceTree = "<group>";
@@ -358,6 +367,8 @@
 				58C8EC3F1BC65BD7008AFC3A /* RXTableViewCell.m */,
 				58C8EC401BC65BD7008AFC3A /* RXFICell.h */,
 				58C8EC411BC65BD7008AFC3A /* RXFICell.m */,
+				58A160471BE35652004E313A /* RXConfigCell.h */,
+				58A160481BE35652004E313A /* RXConfigCell.m */,
 			);
 			path = RXApp;
 			sourceTree = "<group>";
@@ -394,7 +405,6 @@
 				58C8EC751BC65BD7008AFC3A /* RXViewController.m */,
 				58C7BF431BDA1D0A00DFE83A /* RXConfigViewController.h */,
 				58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */,
-				58C7BF451BDA1D0A00DFE83A /* RXConfigViewController.xib */,
 			);
 			path = RXVC;
 			sourceTree = "<group>";
@@ -451,6 +461,8 @@
 				58C8ECBF1BC65C57008AFC3A /* REMainViewController.h */,
 				58C8ECC01BC65C57008AFC3A /* REMainViewController.m */,
 				58C8ECC11BC65C57008AFC3A /* REMainViewController.xib */,
+				58A160441BE351DE004E313A /* REConfigViewController.h */,
+				58A160451BE351DE004E313A /* REConfigViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -505,7 +517,6 @@
 				TargetAttributes = {
 					58C8EC121BC64B59008AFC3A = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = TM3LD9DLW8;
 					};
 				};
 			};
@@ -535,7 +546,6 @@
 				58C8ECC31BC65C57008AFC3A /* REMainViewController.xib in Resources */,
 				58C8EC231BC64B59008AFC3A /* Assets.xcassets in Resources */,
 				58C8ECAD1BC65BD7008AFC3A /* RXGuideViewController.xib in Resources */,
-				58C7BF471BDA1D0A00DFE83A /* RXConfigViewController.xib in Resources */,
 				58C8ECBE1BC65C30008AFC3A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +598,7 @@
 				5837E2271BDF168A00331760 /* NSString+RXUtility.m in Sources */,
 				5837E22F1BDF168A00331760 /* UIView+RXUtility.m in Sources */,
 				58C8ECB91BC65BD7008AFC3A /* RXImageTextButton.m in Sources */,
+				58A160491BE35652004E313A /* RXConfigCell.m in Sources */,
 				58C8ECB71BC65BD7008AFC3A /* RXDatePickerView.m in Sources */,
 				58C8EC921BC65BD7008AFC3A /* RXHttpBlock.m in Sources */,
 				58C8EC951BC65BD7008AFC3A /* RXShareManager.m in Sources */,
@@ -595,6 +606,7 @@
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */,
 				58C8ECBB1BC65BD7008AFC3A /* RXVerifyButton.m in Sources */,
+				58A160461BE351DE004E313A /* REConfigViewController.m in Sources */,
 				5837E22D1BDF168A00331760 /* UINavigationController+RXUtility.m in Sources */,
 				58C8ECB51BC65BD7008AFC3A /* RXActionSheetView.m in Sources */,
 				5837E22C1BDF168A00331760 /* UILabel+RXUtility.m in Sources */,
@@ -624,6 +636,7 @@
 				58C8EC901BC65BD7008AFC3A /* RXApiResult.m in Sources */,
 				58C8EC971BC65BD7008AFC3A /* RXFICell.m in Sources */,
 				58C8ECAA1BC65BD7008AFC3A /* RXFunctionItem.m in Sources */,
+				58A91D8A1BE367A800F55465 /* UIDevice+RXUtility.m in Sources */,
 				58C8ECB01BC65BD7008AFC3A /* RXNavigationController.m in Sources */,
 				5837E22A1BDF168A00331760 /* UIFont+RXUtility.m in Sources */,
 				5837E2291BDF168A00331760 /* UIColor+RXUtility.m in Sources */,

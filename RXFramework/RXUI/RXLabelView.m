@@ -17,6 +17,7 @@
 {
     if (_lbl == nil) {
         _lbl = [[UILabel alloc] initWithFrame:CGRectZero];
+        _lbl.backgroundColor = [UIColor clearColor];
         [self addSubview:_lbl];
     }
     return _lbl;

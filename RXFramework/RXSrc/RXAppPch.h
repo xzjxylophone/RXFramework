@@ -35,7 +35,7 @@
 #import "UIFont+RXUtility.h"
 #import "UIScrollView+RXUtility.h"
 #import "NSDictionary+RXUtility.h"
-
+#import "UIDevice+RXUtility.h"
 
 #import "MASConstraint+RXUtility.h"
 

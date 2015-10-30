@@ -13,7 +13,7 @@
 
 
 #ifndef RX_SDKURLScheme
-#define RX_SDKURLScheme        @"wdpage"
+#define RX_SDKURLScheme        @"rxpage"
 #endif
 
 

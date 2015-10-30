@@ -22,6 +22,13 @@
 
 @implementation REMainViewController
 
+
+- (void)lblAction:(id)sender
+{
+    [self.navigationController rx_openString:@"rxpage://REConfigViewController" query:nil animate:YES];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -35,6 +42,8 @@
     
     [self.rxLabelView updateWithLeftPadding:10];
     self.rxLabelView.lbl.backgroundColor = [UIColor blueColor];
+    
+    [self.lbl rx_addGestureRecognizerWithTarget:self action:@selector(lblAction:)];
     
     [RXHttpBlock queryCarListWithBlock:^(RXHttpBlock *http, id contentObject, NSError *error) {
         NSLog(@"contentObj:%@, error:%@", contentObject, error);

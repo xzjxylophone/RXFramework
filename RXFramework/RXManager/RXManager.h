@@ -49,6 +49,8 @@
 + (NSString *)appVersion;
 + (NSString *)appBuild;
 + (NSString *)appBundleIdentifier;
++ (NSString *)appBundleName;
+
 
 #pragma mark - Device Info
 + (void)testDeviceInfo;
