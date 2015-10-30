@@ -101,13 +101,26 @@
     return result;
 }
 
++ (NSString *)appBundleIdentifier
+{
+    NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
+    NSString *result = plistDic[@"CFBundleIdentifier"];
+    return result;
+}
+
 #pragma mark - Device Info
-+ (void)printDeviceInfo
++ (void)testDeviceInfo
 {
 //    UIDevice *device = [UIDevice currentDevice];
     
     
 }
+
+
+
+
+
+
 
 #pragma mark - Safe Data
 

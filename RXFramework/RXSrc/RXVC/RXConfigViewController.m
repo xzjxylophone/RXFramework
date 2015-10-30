@@ -37,12 +37,31 @@
     self.baseInfoSectionItem = [[RXTVSectionItem alloc] init];
     self.baseInfoSectionItem.data = baseInfoLabelView;
     
+    
+    UIDevice *device = [UIDevice currentDevice];
+    NSString *sizeString = NSStringFromCGRect([UIScreen mainScreen].bounds);
+    RXFunctionItem *item00 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"宽高" action:nil type:0 object:sizeString];
+    RXFunctionItem *item01 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机型号" action:nil type:0 object:device.model];
+    RXFunctionItem *item02 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"iOS系统" action:nil type:0 object:device.systemVersion];
+    RXFunctionItem *item03 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机名称" action:nil type:0 object:device.name];
+//    RXFunctionItem *item04 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"验证码" action:nil type:0 object:device.uniqueIdentifier];
+    
+    self.baseInfoSectionItem.items = @[item00, item01, item02, item03];
+    
+    
     RXLabelView *appInfoLabelView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     [appInfoLabelView updateWithLeftPadding:10];
     appInfoLabelView.lbl.text = @"App应用基本信息";
     
     self.appInfoSectionItem = [[RXTVSectionItem alloc] init];
     self.appInfoSectionItem.data = appInfoLabelView;
+    
+    
+    RXFunctionItem *item10 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"App version" action:nil type:0 object:([RXManager appVersion])];
+    RXFunctionItem *item11 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"App build" action:nil type:0 object:([RXManager appBuild])];
+    RXFunctionItem *item12 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"App identifier" action:nil type:0 object:([RXManager appBundleIdentifier])];
+    
+    self.appInfoSectionItem.items = @[item10, item11, item12];
     
     
 }

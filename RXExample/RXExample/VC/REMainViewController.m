@@ -10,6 +10,8 @@
 #import "RXHttpBlock.h"
 
 #import "RXLabelView.h"
+
+#import "YTKKeyValueStore.h"
 @interface REMainViewController ()
 @property (weak, nonatomic) IBOutlet RXLabelView *rxLabelView;
 
@@ -38,6 +40,20 @@
         NSLog(@"contentObj:%@, error:%@", contentObject, error);
     }];
     
+    
+    
+    YTKKeyValueStore *store = [[YTKKeyValueStore alloc] initDBWithName:@"cache.db"];
+    NSString *tableName = @"user_table";
+//    [store createTableWithName:tableName];
+//    
+//    [store putString:@"123456" withId:@"1" intoTable:tableName];
+    
+//    NSString *str = [store getStringById:@"1" fromTable:tableName];
+//    NSLog(@"str:%@", str);
+    
+    YTKKeyValueItem *item = [store getYTKKeyValueItemById:@"1" fromTable:tableName];
+    
+    NSLog(@"item:%@", item);
 }
 
 - (void)didReceiveMemoryWarning {

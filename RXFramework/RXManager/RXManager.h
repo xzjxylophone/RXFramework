@@ -48,7 +48,10 @@
 
 + (NSString *)appVersion;
 + (NSString *)appBuild;
++ (NSString *)appBundleIdentifier;
 
+#pragma mark - Device Info
++ (void)testDeviceInfo;
 
 
 #pragma mark - Safe Data
