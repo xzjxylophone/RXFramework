@@ -17,7 +17,7 @@
 
 
 
-@property (nonatomic, readonly) NSDictionary *attributes;
+@property (nonatomic, readonly) NSMutableDictionary *attributes;
 
 
 @end

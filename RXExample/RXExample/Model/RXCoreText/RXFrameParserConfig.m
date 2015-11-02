@@ -23,7 +23,7 @@
 }
 
 
-- (NSDictionary *)attributes
+- (NSMutableDictionary *)attributes
 {
     CGFloat fontSize = self.font.pointSize;
     NSString *fontName = self.font.fontName;

@@ -61,5 +61,65 @@
 
 
 
++ (RXCoreTextData *)parseTemplateFile:(NSString *)path config:(RXFrameParserConfig *)config
+{
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
+    if (data != nil) {
+        NSArray *ary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        if ([ary isKindOfClass:[NSArray class]]) {
+            for (NSDictionary *dic in ary) {
+                NSString *type = dic[@"type"];
+                if ([type isEqualToString:@"txt"]) {
+                    NSAttributedString *as = [self parseAttributedContentFromDictionary:dic config:config];
+                    [attributedString appendAttributedString:as];
+                }
+            }
+        }
+    }
+    
+    
+    return [self parseAttributedContent:attributedString config:config];
+}
+
+#pragma mark - Private
+
++ (NSAttributedString *)parseAttributedContentFromDictionary:(NSDictionary *)dic config:(RXFrameParserConfig *)config
+{
+    NSMutableDictionary *attributes = config.attributes;
+    
+    UIColor *color = [self colorFromTemplate:dic[@"color"]];
+    
+    if (color) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
+    }
+    CGFloat fontSize = [dic[@"size"] floatValue];
+    if (fontSize > 0) {
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)config.font.fontName, fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
+    
+    NSString *content = dic[@"content"];
+    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+    
+    
+    
+    
+}
+
++ (UIColor *)colorFromTemplate:(NSString *)name {
+    if ([name isEqualToString:@"blue"]) {
+        return [UIColor blueColor];
+    } else if ([name isEqualToString:@"red"]) {
+        return [UIColor redColor];
+    } else if ([name isEqualToString:@"black"]) {
+        return [UIColor blackColor];
+    } else {
+        return nil;
+    }
+}
+
+
 
 @end

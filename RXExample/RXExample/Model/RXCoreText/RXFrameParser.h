@@ -19,5 +19,6 @@
 
 + (RXCoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(RXFrameParserConfig *)config;
 
++ (RXCoreTextData *)parseTemplateFile:(NSString *)path config:(RXFrameParserConfig *)config;
 
 @end
