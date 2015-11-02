@@ -67,6 +67,7 @@
 {
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableArray *imageArray = [NSMutableArray array];
+    NSMutableArray *linkArray = [NSMutableArray array];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     if (data != nil) {
         NSArray *ary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
@@ -77,13 +78,32 @@
                     NSAttributedString *as = [self parseAttributedContentFromDictionary:dic config:config];
                     [attributedString appendAttributedString:as];
                 } else if ([type isEqualToString:@"img"]) {
+                    NSAttributedString *as = [self parseImageDataFromDictonary:dic config:config];
+                    [attributedString appendAttributedString:as];
+                    
+                    
+                    // 创建 RXCoreTextImageData
                     RXCoreTextImageData *imageData = [[RXCoreTextImageData alloc] init];
                     imageData.name = dic[@"name"];
                     imageData.position = attributedString.length;
                     [imageArray addObject:imageData];
+                } else if ([type isEqualToString:@"link"]) {
                     
-                    NSAttributedString *as = [self parseImageDataFromDictonary:dic config:config];
+                    NSUInteger startPos = attributedString.length;
+                    
+                    
+                    NSAttributedString *as = [self parseAttributedContentFromDictionary:dic config:config];
                     [attributedString appendAttributedString:as];
+                    // 创建 RXCoreTextLineData
+                    NSUInteger length = attributedString.length - startPos;
+                    NSRange linkRange = NSMakeRange(startPos, length);
+                    RXCoreTextLinkData *linkData = [[RXCoreTextLinkData alloc] init];
+                    linkData.title = dic[@"content"];
+                    linkData.url = dic[@"url"];
+                    linkData.range = linkRange;
+                    [linkArray addObject:linkData];
+                } else {
+                    // Do Nothing
                 }
             }
         }
@@ -92,6 +112,7 @@
     
     RXCoreTextData *ctData = [self parseAttributedContent:attributedString config:config];
     ctData.imageAry = imageArray;
+    ctData.linkAry = linkArray;
     return ctData;
 }
 

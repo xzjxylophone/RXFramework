@@ -34,9 +34,69 @@
         CGRect rect = CGRectMake(imagePosition.x, imagePosition.y, imageRect.size.width, imageRect.size.height);
         if (CGRectContainsPoint(rect, point)) {
             NSLog(@"click");
+            return;
+        }
+    }
+    
+    
+    
+    CTFrameRef frameRef = self.data.frameRef;
+    CFArrayRef lines = CTFrameGetLines(frameRef);
+    if (lines == NULL) {
+        return;
+    }
+    
+    CFIndex count = CFArrayGetCount(lines);
+    
+    // 获得每一行的origin坐标
+    CGPoint origins[count];
+    CTFrameGetLineOrigins(frameRef, CFRangeMake(0, 0), origins);
+    
+    // 翻转坐标系
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(0, self.bounds.size.height);
+    transform = CGAffineTransformScale(transform, 1.0f, -1.0f);
+    
+    CFIndex idx = -1;
+    for (int i = 0; i < count; i++) {
+        CGPoint linePoint = origins[i];
+        CTLineRef lineRef = CFArrayGetValueAtIndex(lines, i);
+        // 获取每一行的CGRect信息
+        CGFloat ascent = 0.0f;
+        CGFloat descent = 0.0f;
+        CGFloat leading = 0.0f;
+        CGFloat width = (CGFloat)CTLineGetTypographicBounds(lineRef, &ascent, &descent, &leading);
+        CGFloat height = ascent + descent;
+        CGRect flippedRect = CGRectMake(linePoint.x, linePoint.y, width, height);
+        CGRect rect = CGRectApplyAffineTransform(flippedRect, transform);
+        
+        if (CGRectContainsPoint(rect, point)) {
+            // 将点击的坐标转换成相对于当前行的坐标
+            CGPoint relativePoint = CGPointMake(point.x - CGRectGetMinX(rect), point.y - CGRectGetMinY(rect));
+            // 获得当前点击坐标对应的字符串偏移
+            idx = CTLineGetStringIndexForPosition(lineRef, relativePoint);
+        }
+    }
+    
+    if (idx == -1) {
+        NSLog(@"你没有点击任何文字区域");
+        return;
+    }
+    
+    RXCoreTextLinkData *foundLink = nil;
+    for (RXCoreTextLinkData *linkData in self.data.linkAry) {
+        NSLog(@"idx:%d, range:%@", idx, NSStringFromRange(linkData.range));
+        if (NSLocationInRange(idx, linkData.range)) {
+            foundLink = linkData;
             break;
         }
     }
+
+    if (foundLink == nil) {
+        NSLog(@"没有点击到可连接区域文字");
+        return;
+    }
+    
+    NSLog(@"click:kkkkkkkk");
 }
 - (void)initialize
 {

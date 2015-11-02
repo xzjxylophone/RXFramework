@@ -142,6 +142,24 @@
     [self.view addSubview:self.rxDisplayView];
 }
 
+
+
+- (void)testContentJson3
+{
+    RXFrameParserConfig *config = [[RXFrameParserConfig alloc] init];
+    config.width = k_CS_RX_WinWidth;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content3" ofType:@"json"];
+    RXCoreTextData *data = [RXFrameParser parseTemplateFile:path config:config];
+    
+    
+    
+    
+    self.rxDisplayView = [[RXDisplayView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
+    self.rxDisplayView.data = data;
+    self.rxDisplayView.rx_height = data.height;
+    self.rxDisplayView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:self.rxDisplayView];
+}
 #pragma mark - View Life Cycle
 
 - (void)viewDidLoad {
@@ -162,8 +180,9 @@
     
     
 //    [self testContentJson1];
-    [self testContentJson2];
+//    [self testContentJson2];
     
+    [self testContentJson3];
     
 }
 

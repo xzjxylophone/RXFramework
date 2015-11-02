@@ -17,6 +17,6 @@
 
 
 @property (nonatomic, strong) NSArray *imageAry;
-
+@property (nonatomic, strong) NSArray *linkAry;
 
 @end
