@@ -8,7 +8,44 @@
 
 #import "RXDisplayView.h"
 #import "RXCoreTextData.h"
+#import "RXCoreTextImageData.h"
+#import "RXCoreTextLinkData.h"
+
+@interface RXDisplayView () <UIGestureRecognizerDelegate>
+
+@end
+
+
 @implementation RXDisplayView
+
+#pragma mark - UIGestureRecognizerDelegate
+
+
+#pragma mark - Action
+- (void)tgrAction:(id)sender
+{
+    UITapGestureRecognizer *tgr = sender;
+    CGPoint point = [tgr locationInView:self];
+    for (RXCoreTextImageData *imageData in self.data.imageAry) {
+        // 翻转坐标系, 因为 imageData 中的坐标是CoreText的坐标系
+        CGRect imageRect = imageData.imagePosition;
+        CGPoint imagePosition = imageRect.origin;
+        imagePosition.y = self.bounds.size.height - imageRect.origin.y - imageRect.size.height;
+        CGRect rect = CGRectMake(imagePosition.x, imagePosition.y, imageRect.size.width, imageRect.size.height);
+        if (CGRectContainsPoint(rect, point)) {
+            NSLog(@"click");
+            break;
+        }
+    }
+}
+- (void)initialize
+{
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tgrAction:)];
+    tgr.delegate = self;
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:tgr];
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -29,6 +66,38 @@
         CTFrameDraw(self.data.frameRef, context);
     }
     
+    
+    for (RXCoreTextImageData *imageData in self.data.imageAry) {
+        UIImage *image = [UIImage imageNamed:imageData.name];
+        if (image) {
+            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
+        }
+    }
+    
+    
 }
 
+
+#pragma mark - Constructor And Destructor
+- (id)init
+{
+    if (self = [super init]) {
+        [self initialize];
+    }
+    return self;
+}
+- (id)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        [self initialize];
+    }
+    return self;
+}
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self initialize];
+    }
+    return self;
+}
 @end

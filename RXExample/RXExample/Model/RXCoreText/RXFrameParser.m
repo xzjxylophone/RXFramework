@@ -11,6 +11,8 @@
 #import "RXFrameParserConfig.h"
 #import <CoreText/CoreText.h>
 #import "RXCoreTextData.h"
+#import "RXCoreTextImageData.h"
+#import "RXCoreTextLinkData.h"
 @interface RXFrameParser ()
 
 @end
@@ -64,6 +66,7 @@
 + (RXCoreTextData *)parseTemplateFile:(NSString *)path config:(RXFrameParserConfig *)config
 {
     NSData *data = [NSData dataWithContentsOfFile:path];
+    NSMutableArray *imageArray = [NSMutableArray array];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     if (data != nil) {
         NSArray *ary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
@@ -73,14 +76,47 @@
                 if ([type isEqualToString:@"txt"]) {
                     NSAttributedString *as = [self parseAttributedContentFromDictionary:dic config:config];
                     [attributedString appendAttributedString:as];
+                } else if ([type isEqualToString:@"img"]) {
+                    RXCoreTextImageData *imageData = [[RXCoreTextImageData alloc] init];
+                    imageData.name = dic[@"name"];
+                    imageData.position = attributedString.length;
+                    [imageArray addObject:imageData];
+                    
+                    NSAttributedString *as = [self parseImageDataFromDictonary:dic config:config];
+                    [attributedString appendAttributedString:as];
                 }
             }
         }
     }
     
     
-    return [self parseAttributedContent:attributedString config:config];
+    RXCoreTextData *ctData = [self parseAttributedContent:attributedString config:config];
+    ctData.imageAry = imageArray;
+    return ctData;
 }
+
+
+#pragma mark - Static
+
+static CGFloat ascentCallback(void *ref)
+{
+    NSDictionary *dic = (__bridge NSDictionary *)ref;
+    NSNumber *number = dic[@"height"];
+    return [number floatValue];
+}
+static CGFloat descentCallback(void *ref)
+{
+    return 0;
+}
+static CGFloat widthCallback(void *ref)
+{
+    NSDictionary *dic = (__bridge NSDictionary *)ref;
+    NSNumber *number = dic[@"width"];
+    return [number floatValue];
+}
+
+
+
 
 #pragma mark - Private
 
@@ -102,9 +138,29 @@
     
     NSString *content = dic[@"content"];
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+}
+
++ (NSAttributedString *)parseImageDataFromDictonary:(NSDictionary *)dic config:(RXFrameParserConfig *)config
+{
+    CTRunDelegateCallbacks callbacks;
+    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
+    callbacks.version = kCTRunDelegateVersion1;
+    callbacks.getAscent = ascentCallback;
+    callbacks.getDescent = descentCallback;
+    callbacks.getWidth = widthCallback;
+    
+    CTRunDelegateRef delegateRef = CTRunDelegateCreate(&callbacks, (__bridge void *)(dic));
     
     
+    // 使用 0xFFFC 作为空白的占位符
+    unichar objectReplacementChar = 0xFFFC;
+    NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSDictionary *attributes = config.attributes;
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegateRef);
+    CFRelease(delegateRef);
+    return space;
     
 }
 

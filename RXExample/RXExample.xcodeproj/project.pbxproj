@@ -27,6 +27,9 @@
 		5872A5D61BE74A1E008A7C98 /* content2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5872A5D31BE74A1E008A7C98 /* content2.json */; settings = {ASSET_TAGS = (); }; };
 		5872A5D71BE74A1E008A7C98 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5872A5D41BE74A1E008A7C98 /* coretext-image-1.jpg */; settings = {ASSET_TAGS = (); }; };
 		5872A5D81BE74A1E008A7C98 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5872A5D51BE74A1E008A7C98 /* coretext-image-2.jpg */; settings = {ASSET_TAGS = (); }; };
+		5872A5DB1BE74D0B008A7C98 /* RXCoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5DA1BE74D0B008A7C98 /* RXCoreTextImageData.m */; settings = {ASSET_TAGS = (); }; };
+		5872A5DE1BE74D48008A7C98 /* RXCoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5DD1BE74D48008A7C98 /* RXCoreTextLinkData.m */; settings = {ASSET_TAGS = (); }; };
+		5872A5E01BE7581D008A7C98 /* content3.json in Resources */ = {isa = PBXBuildFile; fileRef = 5872A5DF1BE7581D008A7C98 /* content3.json */; settings = {ASSET_TAGS = (); }; };
 		587B2E721BC7B01A00162929 /* RXSKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 587B2E711BC7B01A00162929 /* RXSKey.m */; settings = {ASSET_TAGS = (); }; };
 		589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D85081BDE105300DF9D6A /* RXTextFieldView.m */; settings = {ASSET_TAGS = (); }; };
 		589D850C1BDE176400DF9D6A /* RXTextViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850B1BDE176400DF9D6A /* RXTextViewView.m */; settings = {ASSET_TAGS = (); }; };
@@ -115,6 +118,11 @@
 		5872A5D31BE74A1E008A7C98 /* content2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content2.json; sourceTree = "<group>"; };
 		5872A5D41BE74A1E008A7C98 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		5872A5D51BE74A1E008A7C98 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
+		5872A5D91BE74D0B008A7C98 /* RXCoreTextImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCoreTextImageData.h; sourceTree = "<group>"; };
+		5872A5DA1BE74D0B008A7C98 /* RXCoreTextImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCoreTextImageData.m; sourceTree = "<group>"; };
+		5872A5DC1BE74D48008A7C98 /* RXCoreTextLinkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCoreTextLinkData.h; sourceTree = "<group>"; };
+		5872A5DD1BE74D48008A7C98 /* RXCoreTextLinkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCoreTextLinkData.m; sourceTree = "<group>"; };
+		5872A5DF1BE7581D008A7C98 /* content3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content3.json; sourceTree = "<group>"; };
 		587B2E701BC7B01A00162929 /* RXSKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSKey.h; sourceTree = "<group>"; };
 		587B2E711BC7B01A00162929 /* RXSKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSKey.m; sourceTree = "<group>"; };
 		589D85071BDE105300DF9D6A /* RXTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextFieldView.h; sourceTree = "<group>"; };
@@ -281,6 +289,10 @@
 				5872A5CB1BE7007E008A7C98 /* RXCoreTextData.m */,
 				5872A5CD1BE7008D008A7C98 /* RXDisplayView.h */,
 				5872A5CE1BE7008D008A7C98 /* RXDisplayView.m */,
+				5872A5D91BE74D0B008A7C98 /* RXCoreTextImageData.h */,
+				5872A5DA1BE74D0B008A7C98 /* RXCoreTextImageData.m */,
+				5872A5DC1BE74D48008A7C98 /* RXCoreTextLinkData.h */,
+				5872A5DD1BE74D48008A7C98 /* RXCoreTextLinkData.m */,
 			);
 			path = RXCoreText;
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 		5872A5D01BE740EC008A7C98 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5872A5DF1BE7581D008A7C98 /* content3.json */,
 				5872A5D31BE74A1E008A7C98 /* content2.json */,
 				5872A5D41BE74A1E008A7C98 /* coretext-image-1.jpg */,
 				5872A5D51BE74A1E008A7C98 /* coretext-image-2.jpg */,
@@ -606,6 +619,7 @@
 				58C8ECC31BC65C57008AFC3A /* REMainViewController.xib in Resources */,
 				5872A5D71BE74A1E008A7C98 /* coretext-image-1.jpg in Resources */,
 				5872A5D81BE74A1E008A7C98 /* coretext-image-2.jpg in Resources */,
+				5872A5E01BE7581D008A7C98 /* content3.json in Resources */,
 				5872A5D61BE74A1E008A7C98 /* content2.json in Resources */,
 				5872A5D21BE74105008A7C98 /* content1.json in Resources */,
 				58C8EC231BC64B59008AFC3A /* Assets.xcassets in Resources */,
@@ -654,6 +668,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C43B701BCA890D002727DF /* RXUser.m in Sources */,
+				5872A5DB1BE74D0B008A7C98 /* RXCoreTextImageData.m in Sources */,
+				5872A5DE1BE74D48008A7C98 /* RXCoreTextLinkData.m in Sources */,
 				58C43B711BCA890D002727DF /* RXUserManager.m in Sources */,
 				5872A5C91BE70063008A7C98 /* RXFrameParser.m in Sources */,
 				58C8EC911BC65BD7008AFC3A /* RXError.m in Sources */,

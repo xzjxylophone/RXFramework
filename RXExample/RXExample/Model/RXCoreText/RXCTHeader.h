@@ -12,6 +12,8 @@
 
 #import "RXFrameParserConfig.h"
 #import "RXFrameParser.h"
+#import "RXCoreTextImageData.h"
+#import "RXCoreTextLinkData.h"
 #import "RxcoreTextData.h"
 #import "RXDisplayView.h"
 

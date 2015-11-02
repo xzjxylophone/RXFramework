@@ -16,5 +16,7 @@
 @property (strong, nonatomic) NSAttributedString *content;
 
 
+@property (nonatomic, strong) NSArray *imageAry;
+
 
 @end
