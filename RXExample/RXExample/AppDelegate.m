@@ -26,6 +26,11 @@
     NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19]};
     [self.mainNC.navigationBar setTitleTextAttributes:dic];
     
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    
+    NSLog(@"width:%.2f height:%.2f", width, height);
+    
 //    self.mainNC.navigationBar.barStyle = UIBarStyleBlack;
 //    self.mainNC.navigationBar.translucent = NO;
     

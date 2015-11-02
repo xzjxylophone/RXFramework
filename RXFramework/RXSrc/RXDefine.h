@@ -64,11 +64,12 @@ typedef enum E_RX_Type {
 #define k_CS_RX_Bmob_Secret_Key             @"85fcb166119163e1"
 #define K_CS_RX_WeiXin_AppSecert    @"bbab14abb374389f694e681316890217"
 
+#define k_CS_RX_WinWidth     ([UIScreen mainScreen].bounds.size.width)
+#define k_CS_RX_WinHeight    ([UIScreen mainScreen].bounds.size.height)
+
 
 #define RX_IsIPhone4_4s        ([UIScreen mainScreen].bounds.size.height < 500)
-#define RX_IsiOS8_0_Or_Later    ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0f)
-
-
+#define RX_IsiOS8_0_Or_Later   ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0f)
 
 
 
