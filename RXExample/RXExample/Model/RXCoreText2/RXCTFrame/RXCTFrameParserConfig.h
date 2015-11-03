@@ -10,4 +10,14 @@
 
 @interface RXCTFrameParserConfig : NSObject
 
+@property (nonatomic, assign) CGFloat width;            // 宽度
+@property (nonatomic, strong) UIFont *font;             // 字体
+@property (nonatomic, assign) CGFloat lineSpace;        // 行距
+@property (nonatomic, strong) UIColor *textColor;       // 文字颜色
+
+
+
+@property (nonatomic, readonly) NSMutableDictionary *attributes;
+
+
 @end

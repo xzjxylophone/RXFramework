@@ -10,4 +10,36 @@
 
 @implementation RXCTFrameData
 
+#pragma mark - Property
+- (void)setFrameRef:(CTFrameRef)frameRef
+{
+    if (_frameRef != frameRef) {
+        if (_frameRef != nil) {
+            CFRelease(_frameRef);
+        }
+        CFRetain(frameRef);
+        _frameRef = frameRef;
+    }
+}
+
+
+
+
+
+
+
+#pragma mark - Constructor And Destructor
+- (void)dealloc
+{
+    if (_frameRef != nil) {
+        CFRelease(_frameRef);
+        _frameRef = nil;
+    }
+}
+
+
+
+
+
+
 @end

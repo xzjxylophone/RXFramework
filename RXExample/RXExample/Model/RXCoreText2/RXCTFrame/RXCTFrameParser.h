@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "RXCTFrameData.h"
+#import "RXCTFrameParserConfig.h"
 @interface RXCTFrameParser : NSObject
+
+
+
++ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameParserConfig *)config;
+
+
+
 
 @end

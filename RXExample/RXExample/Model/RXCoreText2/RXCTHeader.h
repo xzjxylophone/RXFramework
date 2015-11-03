@@ -10,4 +10,12 @@
 #define RXCTHeader_h
 
 
+#import "RXCTFrameData.h"
+#import "RXCTView.h"
+#import "RXCTFrameParser.h"
+#import "RXCTFrameParserConfig.h"
+#import "RXCTTextData.h"
+
+
+
 #endif /* RXCTHeader_h */
