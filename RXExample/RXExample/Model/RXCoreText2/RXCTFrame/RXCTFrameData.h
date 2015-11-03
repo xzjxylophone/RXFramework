@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSAttributedString *content;
 
 
+
+@property (nonatomic, strong) NSArray *textAry;
 @property (nonatomic, strong) NSArray *imageAry;
 @property (nonatomic, strong) NSArray *linkAry;
 

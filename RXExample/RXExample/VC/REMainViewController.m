@@ -174,21 +174,27 @@
     
     
     RXCTTextData *textData = [[RXCTTextData alloc] init];
-    textData.dataType = kE_RX_CTDataType_Text;
     textData.textColor = [UIColor redColor];
     textData.font = [UIFont boldSystemFontOfSize:15];
     textData.content = @" 对于上面的例子，我们给 CTFrameParser 增加了一个将 NSString 转 "
     " 换为 CoreTextData 的方法。";
     
     RXCTImageData *imageData = [[RXCTImageData alloc] init];
-    imageData.dataType = kE_RX_CTDataType_Img;
     imageData.imageName = @"coretext-image-1.jpg";
     imageData.imageUrl = @"";
-    imageData.width = 300;
+    imageData.width = 340;
     imageData.height = 160;
     
     
-    NSArray *ary = @[textData, imageData];
+    
+    RXCTLinkData *linkData = [[RXCTLinkData alloc] init];
+    linkData.textColor = [UIColor blueColor];
+    linkData.font = [UIFont boldSystemFontOfSize:15];
+    linkData.content = @" 对于上面的例子，我们给 CTFrameParser 增加了一个将 NSString 转 "
+    " 换为 CoreTextData 的方法。";
+    
+    
+    NSArray *ary = @[textData, imageData, linkData];
     
     RXCTFrameData *data = [RXCTFrameParser parseWithArray:ary config:config];
     self.rxctView = [[RXCTView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];

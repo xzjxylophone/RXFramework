@@ -1,18 +1,13 @@
 //
-//  RXCTData.h
+//  RXCTTextFrame.m
 //  RXExample
 //
 //  Created by Rush.D.Xzj on 15/11/3.
 //  Copyright © 2015年 Rush.D.Xzj. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "RXCTTextFrame.h"
 
-
-
-
-
-@interface RXCTData : NSObject
-
+@implementation RXCTTextFrame
 
 @end

@@ -17,6 +17,8 @@
 		582710A41BE86105004D9053 /* RXCTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710A31BE86105004D9053 /* RXCTView.m */; settings = {ASSET_TAGS = (); }; };
 		582710A81BE8949D004D9053 /* RXCTImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710A71BE8949D004D9053 /* RXCTImageFrame.m */; settings = {ASSET_TAGS = (); }; };
 		582710AB1BE894AA004D9053 /* RXCTLinkFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710AA1BE894AA004D9053 /* RXCTLinkFrame.m */; settings = {ASSET_TAGS = (); }; };
+		582710AE1BE8B33C004D9053 /* RXCTTextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710AD1BE8B33C004D9053 /* RXCTTextFrame.m */; settings = {ASSET_TAGS = (); }; };
+		582710B11BE8B791004D9053 /* RXCTFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710B01BE8B791004D9053 /* RXCTFrame.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2261BDF168A00331760 /* NSDictionary+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2121BDF168A00331760 /* NSDictionary+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2271BDF168A00331760 /* NSString+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2141BDF168A00331760 /* NSString+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2281BDF168A00331760 /* NSURL+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2161BDF168A00331760 /* NSURL+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
@@ -111,6 +113,10 @@
 		582710A71BE8949D004D9053 /* RXCTImageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTImageFrame.m; sourceTree = "<group>"; };
 		582710A91BE894AA004D9053 /* RXCTLinkFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTLinkFrame.h; sourceTree = "<group>"; };
 		582710AA1BE894AA004D9053 /* RXCTLinkFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTLinkFrame.m; sourceTree = "<group>"; };
+		582710AC1BE8B33C004D9053 /* RXCTTextFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTTextFrame.h; sourceTree = "<group>"; };
+		582710AD1BE8B33C004D9053 /* RXCTTextFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTTextFrame.m; sourceTree = "<group>"; };
+		582710AF1BE8B791004D9053 /* RXCTFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrame.h; sourceTree = "<group>"; };
+		582710B01BE8B791004D9053 /* RXCTFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrame.m; sourceTree = "<group>"; };
 		5837E2111BDF168A00331760 /* NSDictionary+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXUtility.h"; sourceTree = "<group>"; };
 		5837E2121BDF168A00331760 /* NSDictionary+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXUtility.m"; sourceTree = "<group>"; };
 		5837E2131BDF168A00331760 /* NSString+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RXUtility.h"; sourceTree = "<group>"; };
@@ -306,6 +312,10 @@
 				582710A71BE8949D004D9053 /* RXCTImageFrame.m */,
 				582710A91BE894AA004D9053 /* RXCTLinkFrame.h */,
 				582710AA1BE894AA004D9053 /* RXCTLinkFrame.m */,
+				582710AC1BE8B33C004D9053 /* RXCTTextFrame.h */,
+				582710AD1BE8B33C004D9053 /* RXCTTextFrame.m */,
+				582710AF1BE8B791004D9053 /* RXCTFrame.h */,
+				582710B01BE8B791004D9053 /* RXCTFrame.m */,
 			);
 			path = PrivateFrame;
 			sourceTree = "<group>";
@@ -764,6 +774,8 @@
 				58C8EC921BC65BD7008AFC3A /* RXHttpBlock.m in Sources */,
 				58C8EC951BC65BD7008AFC3A /* RXShareManager.m in Sources */,
 				582710A11BE860E4004D9053 /* RXCTFrameParserConfig.m in Sources */,
+				582710B11BE8B791004D9053 /* RXCTFrame.m in Sources */,
+				582710AE1BE8B33C004D9053 /* RXCTTextFrame.m in Sources */,
 				5837E22B1BDF168A00331760 /* UIImage+RXUtility.m in Sources */,
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */,

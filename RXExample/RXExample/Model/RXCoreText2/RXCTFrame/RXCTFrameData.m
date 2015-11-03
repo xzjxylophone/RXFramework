@@ -52,8 +52,8 @@
         if (imageFrame == nil) {
             break;
         }
-        CTLineRef line = (__bridge CTLineRef)lines[i];
-        NSArray *runObjAry = (NSArray *)CTLineGetGlyphRuns(line);
+        CTLineRef lineRef = (__bridge CTLineRef)lines[i];
+        NSArray *runObjAry = (NSArray *)CTLineGetGlyphRuns(lineRef);
         for (id runObj in runObjAry) {
             CTRunRef runRef = (__bridge CTRunRef)runObj;
             NSDictionary *runAttributes = (NSDictionary *)CTRunGetAttributes(runRef);
@@ -64,6 +64,7 @@
             
             
             // 这一段代码真的需要吗??
+            // 获取到对象了, run 的delegate
             RXCTImageData *imageData = CTRunDelegateGetRefCon(delegateRef);
             if (![imageData isKindOfClass:[RXCTImageData class]]) {
                 continue;
@@ -76,7 +77,7 @@
             runBounds.size.width = CTRunGetTypographicBounds(runRef, CFRangeMake(0, 0), &ascent, &descent, NULL);
             runBounds.size.height = ascent + descent;
             
-            CGFloat xOffset = CTLineGetOffsetForStringIndex(line, CTRunGetStringRange(runRef).location, NULL);
+            CGFloat xOffset = CTLineGetOffsetForStringIndex(lineRef, CTRunGetStringRange(runRef).location, NULL);
             runBounds.origin.x = lineOrigins[i].x + xOffset;
             runBounds.origin.y = lineOrigins[i].y;
             runBounds.origin.y -= descent;

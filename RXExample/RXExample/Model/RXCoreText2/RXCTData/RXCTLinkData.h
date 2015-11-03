@@ -10,4 +10,10 @@
 
 @interface RXCTLinkData : RXCTData
 
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIFont *font;
+@property (nonatomic, copy) NSString *content;
+
+
+
 @end

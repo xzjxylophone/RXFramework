@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RXCTFrame.h"
+#import "RXCTImageData.h"
+@interface RXCTImageFrame : RXCTFrame
 
-@interface RXCTImageFrame : NSObject
 
 
 
-@property (nonatomic, strong) NSString *imageName;
-@property (nonatomic, strong) NSString *imageUrl;
-@property (nonatomic, assign) int position;
 
 // 此坐标是 CoreText 的坐标系，而不是UIKit的坐标系
 @property (nonatomic, assign) CGRect imagePosition;

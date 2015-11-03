@@ -1,5 +1,5 @@
 //
-//  RXCTLinkFrame.h
+//  RXCTFrame.h
 //  RXExample
 //
 //  Created by Rush.D.Xzj on 15/11/3.
@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RXCTFrame.h"
-#import "RXCTLinkData.h"
-@interface RXCTLinkFrame : RXCTFrame
+#import "RXCTData.h"
+@interface RXCTFrame : NSObject
 
-
+@property (nonatomic, strong) RXCTData *data;
+@property (nonatomic, assign) NSRange range;
 
 @end

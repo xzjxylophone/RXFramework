@@ -1,5 +1,5 @@
 //
-//  RXCTData.h
+//  RXCTTextFrame.h
 //  RXExample
 //
 //  Created by Rush.D.Xzj on 15/11/3.
@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RXCTFrame.h"
+#import "RXCTTextData.h"
+@interface RXCTTextFrame : RXCTFrame
 
-
-
-
-
-@interface RXCTData : NSObject
 
 
 @end
