@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582710951BE85F65004D9053 /* RXCTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5827108D1BE85F65004D9053 /* RXCTData.m */; settings = {ASSET_TAGS = (); }; };
+		582710961BE85F65004D9053 /* RXCTImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5827108F1BE85F65004D9053 /* RXCTImageData.m */; settings = {ASSET_TAGS = (); }; };
+		582710971BE85F65004D9053 /* RXCTLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710911BE85F65004D9053 /* RXCTLinkData.m */; settings = {ASSET_TAGS = (); }; };
+		582710981BE85F65004D9053 /* RXCTTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710931BE85F65004D9053 /* RXCTTextData.m */; settings = {ASSET_TAGS = (); }; };
+		5827109B1BE86012004D9053 /* RXCTFrameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5827109A1BE86012004D9053 /* RXCTFrameData.m */; settings = {ASSET_TAGS = (); }; };
+		5827109E1BE860D2004D9053 /* RXCTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5827109D1BE860D2004D9053 /* RXCTFrameParser.m */; settings = {ASSET_TAGS = (); }; };
+		582710A11BE860E4004D9053 /* RXCTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710A01BE860E4004D9053 /* RXCTFrameParserConfig.m */; settings = {ASSET_TAGS = (); }; };
+		582710A41BE86105004D9053 /* RXCTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582710A31BE86105004D9053 /* RXCTView.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2261BDF168A00331760 /* NSDictionary+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2121BDF168A00331760 /* NSDictionary+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2271BDF168A00331760 /* NSString+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2141BDF168A00331760 /* NSString+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2281BDF168A00331760 /* NSURL+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2161BDF168A00331760 /* NSURL+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
@@ -18,7 +26,6 @@
 		5837E22E1BDF168A00331760 /* UIScrollView+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2221BDF168A00331760 /* UIScrollView+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E22F1BDF168A00331760 /* UIView+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2241BDF168A00331760 /* UIView+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
 		5837E2321BDF179400331760 /* MASConstraint+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E2311BDF179400331760 /* MASConstraint+RXUtility.m */; settings = {ASSET_TAGS = (); }; };
-		5872A5C11BE6EDFC008A7C98 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5C01BE6EDFC008A7C98 /* CTDisplayView.m */; settings = {ASSET_TAGS = (); }; };
 		5872A5C61BE70051008A7C98 /* RXFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5C51BE70051008A7C98 /* RXFrameParserConfig.m */; settings = {ASSET_TAGS = (); }; };
 		5872A5C91BE70063008A7C98 /* RXFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5C81BE70063008A7C98 /* RXFrameParser.m */; settings = {ASSET_TAGS = (); }; };
 		5872A5CC1BE7007E008A7C98 /* RXCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5872A5CB1BE7007E008A7C98 /* RXCoreTextData.m */; settings = {ASSET_TAGS = (); }; };
@@ -82,6 +89,22 @@
 /* Begin PBXFileReference section */
 		0DF8E7620DD010572B708C03 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5827107E1BE85A58004D9053 /* RXCTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCTHeader.h; sourceTree = "<group>"; };
+		5827108C1BE85F65004D9053 /* RXCTData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTData.h; sourceTree = "<group>"; };
+		5827108D1BE85F65004D9053 /* RXCTData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTData.m; sourceTree = "<group>"; };
+		5827108E1BE85F65004D9053 /* RXCTImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTImageData.h; sourceTree = "<group>"; };
+		5827108F1BE85F65004D9053 /* RXCTImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTImageData.m; sourceTree = "<group>"; };
+		582710901BE85F65004D9053 /* RXCTLinkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTLinkData.h; sourceTree = "<group>"; };
+		582710911BE85F65004D9053 /* RXCTLinkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTLinkData.m; sourceTree = "<group>"; };
+		582710921BE85F65004D9053 /* RXCTTextData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTTextData.h; sourceTree = "<group>"; };
+		582710931BE85F65004D9053 /* RXCTTextData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTTextData.m; sourceTree = "<group>"; };
+		582710991BE86012004D9053 /* RXCTFrameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameData.h; sourceTree = "<group>"; };
+		5827109A1BE86012004D9053 /* RXCTFrameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameData.m; sourceTree = "<group>"; };
+		5827109C1BE860D2004D9053 /* RXCTFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameParser.h; sourceTree = "<group>"; };
+		5827109D1BE860D2004D9053 /* RXCTFrameParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameParser.m; sourceTree = "<group>"; };
+		5827109F1BE860E4004D9053 /* RXCTFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTFrameParserConfig.h; sourceTree = "<group>"; };
+		582710A01BE860E4004D9053 /* RXCTFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTFrameParserConfig.m; sourceTree = "<group>"; };
+		582710A21BE86105004D9053 /* RXCTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCTView.h; sourceTree = "<group>"; };
+		582710A31BE86105004D9053 /* RXCTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCTView.m; sourceTree = "<group>"; };
 		5837E2111BDF168A00331760 /* NSDictionary+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXUtility.h"; sourceTree = "<group>"; };
 		5837E2121BDF168A00331760 /* NSDictionary+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXUtility.m"; sourceTree = "<group>"; };
 		5837E2131BDF168A00331760 /* NSString+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RXUtility.h"; sourceTree = "<group>"; };
@@ -104,8 +127,6 @@
 		5837E2241BDF168A00331760 /* UIView+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RXUtility.m"; sourceTree = "<group>"; };
 		5837E2301BDF179400331760 /* MASConstraint+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+RXUtility.h"; sourceTree = "<group>"; };
 		5837E2311BDF179400331760 /* MASConstraint+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASConstraint+RXUtility.m"; sourceTree = "<group>"; };
-		5872A5BF1BE6EDFC008A7C98 /* CTDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDisplayView.h; sourceTree = "<group>"; };
-		5872A5C01BE6EDFC008A7C98 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		5872A5C31BE70031008A7C98 /* RXCoreTextHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCoreTextHeader.h; sourceTree = "<group>"; };
 		5872A5C41BE70051008A7C98 /* RXFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXFrameParserConfig.h; sourceTree = "<group>"; };
 		5872A5C51BE70051008A7C98 /* RXFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXFrameParserConfig.m; sourceTree = "<group>"; };
@@ -234,9 +255,41 @@
 		5827107D1BE85A0D004D9053 /* RXCoreText2 */ = {
 			isa = PBXGroup;
 			children = (
+				5827108B1BE85F65004D9053 /* RXCTData */,
+				582710941BE85F65004D9053 /* RXCTFrame */,
 				5827107E1BE85A58004D9053 /* RXCTHeader.h */,
 			);
 			path = RXCoreText2;
+			sourceTree = "<group>";
+		};
+		5827108B1BE85F65004D9053 /* RXCTData */ = {
+			isa = PBXGroup;
+			children = (
+				5827108C1BE85F65004D9053 /* RXCTData.h */,
+				5827108D1BE85F65004D9053 /* RXCTData.m */,
+				5827108E1BE85F65004D9053 /* RXCTImageData.h */,
+				5827108F1BE85F65004D9053 /* RXCTImageData.m */,
+				582710901BE85F65004D9053 /* RXCTLinkData.h */,
+				582710911BE85F65004D9053 /* RXCTLinkData.m */,
+				582710921BE85F65004D9053 /* RXCTTextData.h */,
+				582710931BE85F65004D9053 /* RXCTTextData.m */,
+			);
+			path = RXCTData;
+			sourceTree = "<group>";
+		};
+		582710941BE85F65004D9053 /* RXCTFrame */ = {
+			isa = PBXGroup;
+			children = (
+				582710991BE86012004D9053 /* RXCTFrameData.h */,
+				5827109A1BE86012004D9053 /* RXCTFrameData.m */,
+				5827109C1BE860D2004D9053 /* RXCTFrameParser.h */,
+				5827109D1BE860D2004D9053 /* RXCTFrameParser.m */,
+				5827109F1BE860E4004D9053 /* RXCTFrameParserConfig.h */,
+				582710A01BE860E4004D9053 /* RXCTFrameParserConfig.m */,
+				582710A21BE86105004D9053 /* RXCTView.h */,
+				582710A31BE86105004D9053 /* RXCTView.m */,
+			);
+			path = RXCTFrame;
 			sourceTree = "<group>";
 		};
 		5837E2101BDF168A00331760 /* RXiOS */ = {
@@ -280,8 +333,6 @@
 		5872A5BE1BE6EDDF008A7C98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5872A5BF1BE6EDFC008A7C98 /* CTDisplayView.h */,
-				5872A5C01BE6EDFC008A7C98 /* CTDisplayView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -689,9 +740,12 @@
 				5837E22F1BDF168A00331760 /* UIView+RXUtility.m in Sources */,
 				58C8ECB91BC65BD7008AFC3A /* RXImageTextButton.m in Sources */,
 				58A160491BE35652004E313A /* RXConfigCell.m in Sources */,
+				582710961BE85F65004D9053 /* RXCTImageData.m in Sources */,
+				582710951BE85F65004D9053 /* RXCTData.m in Sources */,
 				58C8ECB71BC65BD7008AFC3A /* RXDatePickerView.m in Sources */,
 				58C8EC921BC65BD7008AFC3A /* RXHttpBlock.m in Sources */,
 				58C8EC951BC65BD7008AFC3A /* RXShareManager.m in Sources */,
+				582710A11BE860E4004D9053 /* RXCTFrameParserConfig.m in Sources */,
 				5837E22B1BDF168A00331760 /* UIImage+RXUtility.m in Sources */,
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */,
@@ -701,6 +755,7 @@
 				58C8ECB51BC65BD7008AFC3A /* RXActionSheetView.m in Sources */,
 				5837E22C1BDF168A00331760 /* UILabel+RXUtility.m in Sources */,
 				5872A5CC1BE7007E008A7C98 /* RXCoreTextData.m in Sources */,
+				5827109B1BE86012004D9053 /* RXCTFrameData.m in Sources */,
 				58C8EC1B1BC64B59008AFC3A /* AppDelegate.m in Sources */,
 				58C7BF461BDA1D0A00DFE83A /* RXConfigViewController.m in Sources */,
 				589D850F1BDE1B7900DF9D6A /* RXTextView.m in Sources */,
@@ -723,15 +778,18 @@
 				58C8ECAC1BC65BD7008AFC3A /* RXGuideViewController.m in Sources */,
 				58C8ECBA1BC65BD7008AFC3A /* RXPageControl.m in Sources */,
 				58C8ECAF1BC65BD7008AFC3A /* RXViewController.m in Sources */,
-				5872A5C11BE6EDFC008A7C98 /* CTDisplayView.m in Sources */,
 				5872A5CF1BE7008D008A7C98 /* RXDisplayView.m in Sources */,
+				582710971BE85F65004D9053 /* RXCTLinkData.m in Sources */,
+				582710A41BE86105004D9053 /* RXCTView.m in Sources */,
 				58C8ECB61BC65BD7008AFC3A /* RXCustomAlertView.m in Sources */,
 				58C8ECAB1BC65BD7008AFC3A /* RXUtils.m in Sources */,
 				58C8EC901BC65BD7008AFC3A /* RXApiResult.m in Sources */,
 				58C8EC971BC65BD7008AFC3A /* RXFICell.m in Sources */,
+				5827109E1BE860D2004D9053 /* RXCTFrameParser.m in Sources */,
 				58C8ECAA1BC65BD7008AFC3A /* RXFunctionItem.m in Sources */,
 				58A91D8A1BE367A800F55465 /* UIDevice+RXUtility.m in Sources */,
 				58C8ECB01BC65BD7008AFC3A /* RXNavigationController.m in Sources */,
+				582710981BE85F65004D9053 /* RXCTTextData.m in Sources */,
 				5837E22A1BDF168A00331760 /* UIFont+RXUtility.m in Sources */,
 				5837E2291BDF168A00331760 /* UIColor+RXUtility.m in Sources */,
 				58C8ECB41BC65BD7008AFC3A /* UIViewController+RXSDK.m in Sources */,

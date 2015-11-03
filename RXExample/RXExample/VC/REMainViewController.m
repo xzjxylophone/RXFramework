@@ -160,6 +160,20 @@
     self.rxDisplayView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.rxDisplayView];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #pragma mark - View Life Cycle
 
 - (void)viewDidLoad {
