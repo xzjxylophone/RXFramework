@@ -7,6 +7,9 @@
 //
 
 #import "RXCTView.h"
+#import "RXCTImageData.h"
+#import "RXCTLinkData.h"
+#import "RXCTImageFrame.h"
 
 @implementation RXCTView
 
@@ -26,6 +29,14 @@
     
     if (self.rxctFrameData) {
         CTFrameDraw(self.rxctFrameData.frameRef, context);
+    }
+    
+    
+    for (RXCTImageFrame *imageFrame in self.rxctFrameData.imageAry) {
+        UIImage *image = [UIImage imageNamed:imageFrame.imageName];
+        if (image) {
+            CGContextDrawImage(context, imageFrame.imagePosition, image.CGImage);
+        }
     }
     
 }

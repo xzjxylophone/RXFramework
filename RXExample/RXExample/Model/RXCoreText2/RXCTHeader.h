@@ -14,8 +14,11 @@
 #import "RXCTView.h"
 #import "RXCTFrameParser.h"
 #import "RXCTFrameParserConfig.h"
-#import "RXCTTextData.h"
 
+
+#import "RXCTTextData.h"
+#import "RXCTImageData.h"
+#import "RXCTLinkData.h"
 
 
 #endif /* RXCTHeader_h */
