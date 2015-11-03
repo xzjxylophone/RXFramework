@@ -84,7 +84,7 @@
     
     RXCoreTextLinkData *foundLink = nil;
     for (RXCoreTextLinkData *linkData in self.data.linkAry) {
-        NSLog(@"idx:%d, range:%@", idx, NSStringFromRange(linkData.range));
+        NSLog(@"idx:%zd, range:%@", idx, NSStringFromRange(linkData.range));
         if (NSLocationInRange(idx, linkData.range)) {
             foundLink = linkData;
             break;

@@ -13,7 +13,7 @@
 
 #import "YTKKeyValueStore.h"
 
-#import "RXCTHeader.h"
+#import "RXCoreTextHeader.h"
 @interface REMainViewController ()
 @property (weak, nonatomic) IBOutlet RXLabelView *rxLabelView;
 

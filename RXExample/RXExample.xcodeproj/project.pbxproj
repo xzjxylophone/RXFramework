@@ -81,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		0DF8E7620DD010572B708C03 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5827107E1BE85A58004D9053 /* RXCTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCTHeader.h; sourceTree = "<group>"; };
 		5837E2111BDF168A00331760 /* NSDictionary+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXUtility.h"; sourceTree = "<group>"; };
 		5837E2121BDF168A00331760 /* NSDictionary+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXUtility.m"; sourceTree = "<group>"; };
 		5837E2131BDF168A00331760 /* NSString+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RXUtility.h"; sourceTree = "<group>"; };
@@ -105,7 +106,7 @@
 		5837E2311BDF179400331760 /* MASConstraint+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASConstraint+RXUtility.m"; sourceTree = "<group>"; };
 		5872A5BF1BE6EDFC008A7C98 /* CTDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDisplayView.h; sourceTree = "<group>"; };
 		5872A5C01BE6EDFC008A7C98 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
-		5872A5C31BE70031008A7C98 /* RXCTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCTHeader.h; sourceTree = "<group>"; };
+		5872A5C31BE70031008A7C98 /* RXCoreTextHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCoreTextHeader.h; sourceTree = "<group>"; };
 		5872A5C41BE70051008A7C98 /* RXFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXFrameParserConfig.h; sourceTree = "<group>"; };
 		5872A5C51BE70051008A7C98 /* RXFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXFrameParserConfig.m; sourceTree = "<group>"; };
 		5872A5C71BE70063008A7C98 /* RXFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXFrameParser.h; sourceTree = "<group>"; };
@@ -230,6 +231,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5827107D1BE85A0D004D9053 /* RXCoreText2 */ = {
+			isa = PBXGroup;
+			children = (
+				5827107E1BE85A58004D9053 /* RXCTHeader.h */,
+			);
+			path = RXCoreText2;
+			sourceTree = "<group>";
+		};
 		5837E2101BDF168A00331760 /* RXiOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +289,7 @@
 		5872A5C21BE70015008A7C98 /* RXCoreText */ = {
 			isa = PBXGroup;
 			children = (
-				5872A5C31BE70031008A7C98 /* RXCTHeader.h */,
+				5872A5C31BE70031008A7C98 /* RXCoreTextHeader.h */,
 				5872A5C41BE70051008A7C98 /* RXFrameParserConfig.h */,
 				5872A5C51BE70051008A7C98 /* RXFrameParserConfig.m */,
 				5872A5C71BE70063008A7C98 /* RXFrameParser.h */,
@@ -313,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				5872A5D01BE740EC008A7C98 /* Data */,
+				5827107D1BE85A0D004D9053 /* RXCoreText2 */,
 				5872A5C21BE70015008A7C98 /* RXCoreText */,
 				5872A5BE1BE6EDDF008A7C98 /* View */,
 				587B2E701BC7B01A00162929 /* RXSKey.h */,

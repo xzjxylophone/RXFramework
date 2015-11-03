@@ -1,13 +1,13 @@
 //
-//  RXCTHeader.h
+//  RXCoreTextHeader.h
 //  RXExample
 //
 //  Created by Rush.D.Xzj on 15/11/2.
 //  Copyright © 2015年 Rush.D.Xzj. All rights reserved.
 //
 
-#ifndef RXCTHeader_h
-#define RXCTHeader_h
+#ifndef RXCoreTextHeader_h
+#define RXCoreTextHeader_h
 
 
 #import "RXFrameParserConfig.h"
@@ -21,4 +21,4 @@
 
 
 
-#endif /* RXCTHeader_h */
+#endif /* RXCoreTextHeader_h */
