@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RXCTFrame.h"
-#import "RXCTImageData.h"
+
 @interface RXCTImageFrame : RXCTFrame
 
 

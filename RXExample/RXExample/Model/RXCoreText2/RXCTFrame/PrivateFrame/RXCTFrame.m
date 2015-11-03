@@ -7,7 +7,7 @@
 //
 
 #import "RXCTFrame.h"
-
+#import "RXCTData.h"
 @implementation RXCTFrame
 
 @end

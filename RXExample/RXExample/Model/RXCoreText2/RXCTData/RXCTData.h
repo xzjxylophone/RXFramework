@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 
 
-
+@class RXCTFrame;
+@class RXCTFrameParserConfig;
 
 
 @interface RXCTData : NSObject
+
+
+
+
+- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
 
 
 @end

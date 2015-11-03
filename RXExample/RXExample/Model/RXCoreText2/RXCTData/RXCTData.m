@@ -7,7 +7,14 @@
 //
 
 #import "RXCTData.h"
-
+#import "RXCTFrameParserConfig.h"
 @implementation RXCTData
 
+
+- (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
+{
+    // Need to override
+    // Do Nothing
+    return nil;
+}
 @end

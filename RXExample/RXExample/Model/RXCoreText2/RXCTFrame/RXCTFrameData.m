@@ -8,8 +8,34 @@
 
 #import "RXCTFrameData.h"
 #import "RXCTImageFrame.h"
+#import "RXCTLinkFrame.h"
 #import "RXCTImageData.h"
+
+@interface RXCTFrameData ()
+
+@property (nonatomic, strong) NSArray *m_imageAry;
+@property (nonatomic, strong) NSArray *m_linkAry;
+
+@property (nonatomic, strong) NSArray *m_textAry;
+
+@end
+
+
 @implementation RXCTFrameData
+
+#pragma mark - ReadOnly Property
+- (NSArray *)imageAry
+{
+    return self.m_imageAry;
+}
+- (NSArray *)linkAry
+{
+    return self.m_linkAry;
+}
+- (NSArray *)textAry
+{
+    return self.m_textAry;
+}
 
 #pragma mark - Property
 - (void)setFrameRef:(CTFrameRef)frameRef
@@ -24,9 +50,26 @@
 }
 
 
-- (void)setImageAry:(NSArray *)imageAry
+- (void)setAttributedArray:(NSArray *)attributedArray
 {
-    _imageAry = imageAry;
+    _attributedArray = attributedArray;
+    
+    
+    NSMutableArray *imageAry = [NSMutableArray array];
+    NSMutableArray *linkAry = [NSMutableArray array];
+    NSMutableArray *textAry = [NSMutableArray array];
+    for (RXCTFrame *rxctFrame in self.attributedArray) {
+        if ([rxctFrame isKindOfClass:[RXCTImageFrame class]]) {
+            [imageAry addObject:rxctFrame];
+        } else if ([rxctFrame isKindOfClass:[RXCTLinkFrame class]]) {
+            [linkAry addObject:rxctFrame];
+        } else {
+            [textAry addObject:rxctFrame];
+        }
+    }
+    self.m_imageAry = imageAry;
+    self.m_linkAry = linkAry;
+    self.m_textAry = textAry;
     [self fillImagePosition];
 }
 
@@ -45,6 +88,7 @@
     CTFrameGetLineOrigins(self.frameRef, CFRangeMake(0, 0), lineOrigins);
     
     int imgIndex = 0;
+    
     
     RXCTImageFrame *imageFrame = self.imageAry[0];
     

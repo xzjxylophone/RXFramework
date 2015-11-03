@@ -19,9 +19,16 @@
 
 
 
-@property (nonatomic, strong) NSArray *textAry;
-@property (nonatomic, strong) NSArray *imageAry;
-@property (nonatomic, strong) NSArray *linkAry;
+@property (nonatomic, strong) NSArray *attributedArray;
+
+
+
+// 具体的Array
+@property (nonatomic, readonly) NSArray *imageAry;
+@property (nonatomic, readonly) NSArray *linkAry;
+
+@property (nonatomic, readonly) NSArray *textAry;
+
 
 
 @end

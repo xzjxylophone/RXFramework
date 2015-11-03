@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RXCTData.h"
+@class RXCTData;
 @interface RXCTFrame : NSObject
 
 @property (nonatomic, strong) RXCTData *data;
