@@ -46,19 +46,10 @@
 #pragma mark - Private
 - (void)testConfigVC
 {
-//    self.lbl.backgroundColor = [UIColor redColor];
     self.lbl.text = @"我们一起来测试";
-    
-//    NSLog(@"self.view:%@, self.label:%@", self.view, self.lbl);
-    
-    
-    
     [self.rxLabelView updateWithLeftPadding:10];
     self.rxLabelView.lbl.backgroundColor = [UIColor blueColor];
-    
     [self.lbl rx_addGestureRecognizerWithTarget:self action:@selector(lblAction:)];
-    
-//    NSLog(@"self.lbl:%@ self.rxLabelView:%@", self.lbl, self.rxLabelView);
 }
 - (void)testHttp
 {

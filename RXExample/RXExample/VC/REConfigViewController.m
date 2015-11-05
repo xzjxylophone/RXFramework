@@ -24,6 +24,9 @@
     // Do any additional setup after loading the view.
     
     self.functionItems = @[self.baseInfoSectionItem, self.appInfoSectionItem];
+    
+    
+    NSLog(@"xxxxxxxxxx");
 
 }
 

@@ -18,15 +18,10 @@
 }
 - (void)setBbiBack:(UIBarButtonItem *)bbiBack
 {
-    objc_setAssociatedObject(self, @"rx_bbiBAck", bbiBack, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @"rx_bbiBack", bbiBack, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark - Override
-#ifdef __IPHONE_7_0
-- (UIRectEdge)edgesForExtendedLayout {
-    return UIRectEdgeNone;
-}
-#endif
+
 
 #pragma mark - Action
 - (void)bbiBackAction:(id)sender

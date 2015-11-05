@@ -12,6 +12,8 @@
 
 #import "UIViewController+REBase.h"
 
+
+
 @implementation RXVCIntercepter
 
 + (void)load
@@ -46,10 +48,6 @@
         [UIViewController aspect_hookSelector:@selector(loadView) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo){
             [self loadView:[aspectInfo instance]];
         } error:NULL];
-        
-        [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
-            [self viewWillAppear:animated viewController:[aspectInfo instance]];
-        } error:NULL];
     }
     return self;
 }
@@ -67,14 +65,16 @@
     NSLog(@"[%@ loadView]", [viewController class]);
     
     
+    UIBarButtonItem *bbiBack = [RXUtils rxBarButtonItemWithTarget:viewController action:@selector(bbiBackAction:) imageName:@"icon_back"];
+    bbiBack = [[UIBarButtonItem alloc] initWithTitle:@"返回上一级" style:(UIBarButtonItemStylePlain) target:viewController action:@selector(bbiBackAction:)];
+    viewController.bbiBack = bbiBack;
+    viewController.navigationItem.leftBarButtonItem = viewController.bbiBack;
     
-    
+    viewController.view.backgroundColor = [UIColor redColor];
     
 }
 
-- (void)viewWillAppear:(BOOL)animated viewController:(UIViewController *)viewController
-{
-    /* 你可以使用这个方法进行打日志，初始化基础业务相关的内容 */
-    NSLog(@"[%@ viewWillAppear:%@]", [viewController class], animated ? @"YES" : @"NO");
-}
+
+
+
 @end

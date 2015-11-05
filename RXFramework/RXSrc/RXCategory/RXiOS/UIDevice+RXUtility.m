@@ -32,7 +32,6 @@
 + (NSString *)rx_currentPhoneNumber
 {
     NSString *num = [[NSUserDefaults standardUserDefaults] stringForKey:@"SBFormattedPhoneNumber"];
-    NSLog(@"Phone Number: %@", num);
     return num;
 }
 
