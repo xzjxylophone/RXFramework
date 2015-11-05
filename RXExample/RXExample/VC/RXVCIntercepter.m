@@ -9,6 +9,9 @@
 #import "RXVCIntercepter.h"
 #import <Aspects/Aspects.h>
 #import <UIKit/UIKit.h>
+
+#import "UIViewController+REBase.h"
+
 @implementation RXVCIntercepter
 
 + (void)load
@@ -63,7 +66,10 @@
     /* 你可以使用这个方法进行打日志，初始化基础业务相关的内容 */
     NSLog(@"[%@ loadView]", [viewController class]);
     
-    viewController.view.backgroundColor = [UIColor redColor];
+    
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated viewController:(UIViewController *)viewController

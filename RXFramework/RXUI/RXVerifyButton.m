@@ -178,19 +178,19 @@
 
 - (void)awakeFromNib
 {
-    [self initializeUIAndData];
+    [self initialize];
 }
 
 
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self initializeUIAndData];
+        [self initialize];
     }
     return self;
 }
 
-- (void)initializeUIAndData
+- (void)initialize
 {
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;

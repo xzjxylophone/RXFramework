@@ -14,17 +14,7 @@
 
 @implementation REConfigViewController
 
-#pragma mark - initialize UI And Data
-- (void)initializeUIAndData
-{
-    [super initializeUIAndData];
-    
-    self.functionItems = @[self.baseInfoSectionItem, self.appInfoSectionItem];
-}
-- (void)initializeAction
-{
-    [super initializeAction];
-}
+
 
 #pragma mark - View Life Cycle
 
@@ -32,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.functionItems = @[self.baseInfoSectionItem, self.appInfoSectionItem];
+
 }
 
 - (void)didReceiveMemoryWarning {

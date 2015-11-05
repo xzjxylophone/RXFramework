@@ -6,12 +6,12 @@
 //  Copyright © 2015年 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXViewController.h"
+#import <UIKit/UIKit.h>
 @class RXTVSectionItem;
 
 
 
-@interface RXConfigViewController : RXViewController <UITableViewDelegate, UITableViewDataSource>
+@interface RXConfigViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) NSArray *functionItems;

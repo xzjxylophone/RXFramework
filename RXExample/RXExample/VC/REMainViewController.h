@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RXViewController.h"
-@interface REMainViewController : RXViewController
+#import <UIKit/UIKit.h>
+@interface REMainViewController : UIViewController
 
 @end

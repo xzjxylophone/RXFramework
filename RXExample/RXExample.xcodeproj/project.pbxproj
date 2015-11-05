@@ -45,6 +45,7 @@
 		5894C8571BEAEB2B009FA71F /* RXVCIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5894C8561BEAEB2B009FA71F /* RXVCIntercepter.m */; };
 		5894C8741BEB2AD6009FA71F /* RETestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5894C8721BEB2AD6009FA71F /* RETestViewController.m */; };
 		5894C8751BEB2AD6009FA71F /* RETestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5894C8731BEB2AD6009FA71F /* RETestViewController.xib */; };
+		5894C87B1BEB4CCF009FA71F /* UIViewController+REBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5894C87A1BEB4CCF009FA71F /* UIViewController+REBase.m */; };
 		589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D85081BDE105300DF9D6A /* RXTextFieldView.m */; };
 		589D850C1BDE176400DF9D6A /* RXTextViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850B1BDE176400DF9D6A /* RXTextViewView.m */; };
 		589D850F1BDE1B7900DF9D6A /* RXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D850E1BDE1B7900DF9D6A /* RXTextView.m */; };
@@ -75,8 +76,6 @@
 		58C8ECAB1BC65BD7008AFC3A /* RXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC6D1BC65BD7008AFC3A /* RXUtils.m */; };
 		58C8ECAC1BC65BD7008AFC3A /* RXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC701BC65BD7008AFC3A /* RXGuideViewController.m */; };
 		58C8ECAD1BC65BD7008AFC3A /* RXGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C8EC711BC65BD7008AFC3A /* RXGuideViewController.xib */; };
-		58C8ECAE1BC65BD7008AFC3A /* RXListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC731BC65BD7008AFC3A /* RXListViewController.m */; };
-		58C8ECAF1BC65BD7008AFC3A /* RXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC751BC65BD7008AFC3A /* RXViewController.m */; };
 		58C8ECB01BC65BD7008AFC3A /* RXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC781BC65BD7008AFC3A /* RXNavigationController.m */; };
 		58C8ECB11BC65BD7008AFC3A /* RXSDKConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC7A1BC65BD7008AFC3A /* RXSDKConfigManager.m */; };
 		58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C8EC7C1BC65BD7008AFC3A /* UINavigationController+RXSDK.m */; };
@@ -167,6 +166,8 @@
 		5894C8711BEB2AD6009FA71F /* RETestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETestViewController.h; sourceTree = "<group>"; };
 		5894C8721BEB2AD6009FA71F /* RETestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETestViewController.m; sourceTree = "<group>"; };
 		5894C8731BEB2AD6009FA71F /* RETestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RETestViewController.xib; sourceTree = "<group>"; };
+		5894C8791BEB4CCF009FA71F /* UIViewController+REBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REBase.h"; sourceTree = "<group>"; };
+		5894C87A1BEB4CCF009FA71F /* UIViewController+REBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REBase.m"; sourceTree = "<group>"; };
 		589D85071BDE105300DF9D6A /* RXTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextFieldView.h; sourceTree = "<group>"; };
 		589D85081BDE105300DF9D6A /* RXTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTextFieldView.m; sourceTree = "<group>"; };
 		589D850A1BDE176400DF9D6A /* RXTextViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTextViewView.h; sourceTree = "<group>"; };
@@ -226,10 +227,6 @@
 		58C8EC6F1BC65BD7008AFC3A /* RXGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXGuideViewController.h; sourceTree = "<group>"; };
 		58C8EC701BC65BD7008AFC3A /* RXGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGuideViewController.m; sourceTree = "<group>"; };
 		58C8EC711BC65BD7008AFC3A /* RXGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXGuideViewController.xib; sourceTree = "<group>"; };
-		58C8EC721BC65BD7008AFC3A /* RXListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXListViewController.h; sourceTree = "<group>"; };
-		58C8EC731BC65BD7008AFC3A /* RXListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXListViewController.m; sourceTree = "<group>"; };
-		58C8EC741BC65BD7008AFC3A /* RXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXViewController.h; sourceTree = "<group>"; };
-		58C8EC751BC65BD7008AFC3A /* RXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXViewController.m; sourceTree = "<group>"; };
 		58C8EC771BC65BD7008AFC3A /* RXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNavigationController.h; sourceTree = "<group>"; };
 		58C8EC781BC65BD7008AFC3A /* RXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNavigationController.m; sourceTree = "<group>"; };
 		58C8EC791BC65BD7008AFC3A /* RXSDKConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSDKConfigManager.h; sourceTree = "<group>"; };
@@ -569,10 +566,6 @@
 				58C8EC6F1BC65BD7008AFC3A /* RXGuideViewController.h */,
 				58C8EC701BC65BD7008AFC3A /* RXGuideViewController.m */,
 				58C8EC711BC65BD7008AFC3A /* RXGuideViewController.xib */,
-				58C8EC721BC65BD7008AFC3A /* RXListViewController.h */,
-				58C8EC731BC65BD7008AFC3A /* RXListViewController.m */,
-				58C8EC741BC65BD7008AFC3A /* RXViewController.h */,
-				58C8EC751BC65BD7008AFC3A /* RXViewController.m */,
 				58C7BF431BDA1D0A00DFE83A /* RXConfigViewController.h */,
 				58C7BF441BDA1D0A00DFE83A /* RXConfigViewController.m */,
 			);
@@ -638,6 +631,8 @@
 				5894C8711BEB2AD6009FA71F /* RETestViewController.h */,
 				5894C8721BEB2AD6009FA71F /* RETestViewController.m */,
 				5894C8731BEB2AD6009FA71F /* RETestViewController.xib */,
+				5894C8791BEB4CCF009FA71F /* UIViewController+REBase.h */,
+				5894C87A1BEB4CCF009FA71F /* UIViewController+REBase.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -773,6 +768,7 @@
 				58C43B701BCA890D002727DF /* RXUser.m in Sources */,
 				5872A5DB1BE74D0B008A7C98 /* RXCoreTextImageData.m in Sources */,
 				5872A5DE1BE74D48008A7C98 /* RXCoreTextLinkData.m in Sources */,
+				5894C87B1BEB4CCF009FA71F /* UIViewController+REBase.m in Sources */,
 				58C43B711BCA890D002727DF /* RXUserManager.m in Sources */,
 				5872A5C91BE70063008A7C98 /* RXFrameParser.m in Sources */,
 				5894C8741BEB2AD6009FA71F /* RETestViewController.m in Sources */,
@@ -818,12 +814,10 @@
 				58C8ECB11BC65BD7008AFC3A /* RXSDKConfigManager.m in Sources */,
 				589D850C1BDE176400DF9D6A /* RXTextViewView.m in Sources */,
 				58C8ECC21BC65C57008AFC3A /* REMainViewController.m in Sources */,
-				58C8ECAE1BC65BD7008AFC3A /* RXListViewController.m in Sources */,
 				58A160431BE30B60004E313A /* RXDataProvider.m in Sources */,
 				5837E2261BDF168A00331760 /* NSDictionary+RXUtility.m in Sources */,
 				58C8ECAC1BC65BD7008AFC3A /* RXGuideViewController.m in Sources */,
 				58C8ECBA1BC65BD7008AFC3A /* RXPageControl.m in Sources */,
-				58C8ECAF1BC65BD7008AFC3A /* RXViewController.m in Sources */,
 				5872A5CF1BE7008D008A7C98 /* RXDisplayView.m in Sources */,
 				582710971BE85F65004D9053 /* RXCTLinkData.m in Sources */,
 				582710AB1BE894AA004D9053 /* RXCTLinkFrame.m in Sources */,

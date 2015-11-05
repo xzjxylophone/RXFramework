@@ -81,11 +81,14 @@
     UIView *view = sectionItem.object;
     return view;
 }
-#pragma mark - initialize UI And Data
-- (void)initializeUIAndData
-{
-    [super initializeUIAndData];
-    
+
+
+
+#pragma mark - View Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
     
     UIColor *bgColor = [UIColor grayColor];
@@ -100,7 +103,7 @@
     [self.view addSubview:self.tableView];
     UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).width.insets(padding);
+        make.edges.equalTo(self.view).with.insets(padding);
     }];
     
     
@@ -147,7 +150,7 @@
     RXFunctionItem *item01 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"实际宽高" action:nil type:0 object:nativeSizeString];
     RXFunctionItem *item02 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"逻辑比率" action:nil type:0 object:scaleString];
     RXFunctionItem *item03 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"实际比率" action:nil type:0 object:nativeScaleString];
-//    RXFunctionItem *item04 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机型号" action:nil type:0 object:device.model];
+    //    RXFunctionItem *item04 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机型号" action:nil type:0 object:device.model];
     RXFunctionItem *item05 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"iOS系统" action:nil type:0 object:[NSString stringWithFormat:@"%@ %@", device.systemName, device.systemVersion]];
     RXFunctionItem *item06 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机名称" action:nil type:0 object:device.name];
     RXFunctionItem *item07 = [[RXFunctionItem alloc] initWithIconName:@"" title:@"手机序列号" action:nil type:0 object:device.identifierForVendor.UUIDString];
@@ -175,19 +178,6 @@
     self.appInfoSectionItem.items = @[item10, item11, item12, item13];
     
     self.view.backgroundColor = bgColor;
-    
-}
-- (void)initializeAction
-{
-    [super initializeAction];
-}
-
-
-#pragma mark - View Life Cycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -33,9 +33,14 @@
 }
 
 
-#pragma mark - initialize UI And Data
-- (void)initializeUIAndData
-{
+
+
+#pragma mark - View Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
     
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
@@ -112,25 +117,10 @@
     self.scrollView.contentSize = CGSizeMake(width * count, height);
     self.scrollView.delegate = self;
     
-
+    
     self.pageControl.userInteractionEnabled = NO;
     self.pageControl.numberOfPages = viewAry.count;
     self.pageControl.currentPage = 0;
-}
-- (void)initializeAction
-{
-    
-}
-
-
-
-
-
-#pragma mark - View Life Cycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

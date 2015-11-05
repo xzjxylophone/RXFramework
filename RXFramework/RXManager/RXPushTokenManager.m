@@ -8,19 +8,19 @@
 
 #import "RXPushTokenManager.h"
 #define UDKey_RX_PushToken        @"UDKey_RX_PushToken"
-#define UDKey_RX_PushTokenData        @"UDKey_RX_PushTokenData"
 #define UDKey_RX_IsUploadPushToken        @"UDKey_RX_IsUploadPushToken"
 
 
 @implementation RXPushTokenManager
 
-- (NSString *)pushTokenFromData:(NSData *)data
++ (NSString *)pushTokenFromData:(NSData *)data
 {
     NSString *result = [NSString stringWithFormat:@"%@", data];
     result = [[result stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@" " withString:@""];
     return result;
 }
-- (BOOL)isUploadPushToken
++ (BOOL)isUploadPushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     id value = [ud valueForKey:UDKey_RX_IsUploadPushToken];
@@ -31,19 +31,18 @@
     }
 }
 
-
-- (void)cleanInfo
++ (void)cleanInfo
 {
     [self saveIsUploadPushToken:NO];
 }
-- (void)saveIsUploadPushToken:(BOOL)value
++ (void)saveIsUploadPushToken:(BOOL)value
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setValue:@(value) forKey:UDKey_RX_IsUploadPushToken];
     [ud synchronize];
 }
 
-- (NSString *)lastPushToken
++ (NSString *)lastPushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     id value = [ud valueForKey:UDKey_RX_PushToken];
@@ -53,32 +52,15 @@
         return value;
     }
 }
-- (void)savePushToken:(NSString *)pushToken
++ (void)savePushToken:(NSString *)pushToken
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setValue:pushToken forKey:UDKey_RX_PushToken];
     [ud synchronize];
 }
 
-- (NSData *)lastPushTokenData
-{
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    id value = [ud valueForKey:UDKey_RX_PushTokenData];
-    if (value == nil) {
-        return nil;
-    } else {
-        return value;
-    }
-}
-- (void)savePushTokenData:(NSData *)pushToken
-{
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setValue:pushToken forKey:UDKey_RX_PushTokenData];
-    [ud synchronize];
-}
 
-
-- (BOOL)needToUpdateWithPushToken:(NSString *)pushToken
++ (BOOL)needToUpdateWithPushToken:(NSString *)pushToken
 {
     NSString *lastPushToken = [self lastPushToken];
     if (![lastPushToken isEqualToString:pushToken]) {

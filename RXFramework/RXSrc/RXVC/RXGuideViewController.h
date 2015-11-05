@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface RXGuideViewController : RXViewController
+@interface RXGuideViewController : UIViewController
 
 @end

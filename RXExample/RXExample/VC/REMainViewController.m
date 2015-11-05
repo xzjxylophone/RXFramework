@@ -58,7 +58,7 @@
     
     [self.lbl rx_addGestureRecognizerWithTarget:self action:@selector(lblAction:)];
     
-    NSLog(@"self.lbl:%@ self.rxLabelView:%@", self.lbl, self.rxLabelView);
+//    NSLog(@"self.lbl:%@ self.rxLabelView:%@", self.lbl, self.rxLabelView);
 }
 - (void)testHttp
 {
