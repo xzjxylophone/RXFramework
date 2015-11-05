@@ -20,6 +20,11 @@
     attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
     CTFontRef fontRef = CTFontCreateWithName((CFStringRef)self.font.fontName, fontSize, NULL);
     attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+    
+    // 添加一条线
+    attributes[(id)kCTUnderlineStyleAttributeName] = [NSNumber numberWithInt:kCTUnderlineStyleSingle];
+    
+    
     CFRelease(fontRef);
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];

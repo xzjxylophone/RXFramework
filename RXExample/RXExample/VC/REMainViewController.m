@@ -18,6 +18,7 @@
 #import "RXCTHeader.h"
 @interface REMainViewController ()
 @property (weak, nonatomic) IBOutlet RXLabelView *rxLabelView;
+@property (strong, nonatomic) IBOutlet UIView *vTest;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl;
@@ -38,13 +39,17 @@
 }
 
 
+
+
+
+
 #pragma mark - Private
 - (void)testConfigVC
 {
-    self.lbl.backgroundColor = [UIColor redColor];
+//    self.lbl.backgroundColor = [UIColor redColor];
     self.lbl.text = @"我们一起来测试";
     
-    NSLog(@"self.view:%@, self.label:%@", self.view, self.lbl);
+//    NSLog(@"self.view:%@, self.label:%@", self.view, self.lbl);
     
     
     
@@ -52,6 +57,8 @@
     self.rxLabelView.lbl.backgroundColor = [UIColor blueColor];
     
     [self.lbl rx_addGestureRecognizerWithTarget:self action:@selector(lblAction:)];
+    
+    NSLog(@"self.lbl:%@ self.rxLabelView:%@", self.lbl, self.rxLabelView);
 }
 - (void)testHttp
 {
@@ -237,7 +244,11 @@
     
 //    [self testContentJson3];
     
-    [self testMyContent1];
+//    [self testMyContent1];
+    
+//    self.view.backgroundColor = [UIColor redColor];
+    
+    [self testConfigVC];
     
 }
 

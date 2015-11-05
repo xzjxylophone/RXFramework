@@ -19,17 +19,22 @@
 
 - (void)showMain
 {
-    UIViewController *vc1 = [UIViewController rx_vcWithString:@"rxpage://REMainViewController"];
+    UIViewController *vc1 = nil;
+    vc1 = [UIViewController rx_vcWithString:@"rxpage://REMainViewController"];
+//    vc1 = [UIViewController rx_vcWithString:@"rxpage://RETestViewController"];
+//    vc1 = [UIViewController rx_vcWithString:@"rxpage://REMain2ViewController"];
+    
+    
     self.mainNC = [[RXNavigationController alloc] initWithRootViewController:vc1];
     self.mainNC.delegate = self;
     
     NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:19]};
     [self.mainNC.navigationBar setTitleTextAttributes:dic];
     
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    
-    NSLog(@"width:%.2f height:%.2f", width, height);
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+//    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+//    
+//    NSLog(@"width:%.2f height:%.2f", width, height);
     
 //    self.mainNC.navigationBar.barStyle = UIBarStyleBlack;
 //    self.mainNC.navigationBar.translucent = NO;
@@ -45,7 +50,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self showMain];
-    [RXManager testInfoPlist];
+//    [RXManager testInfoPlist];
     
     [self.window makeKeyAndVisible];
 

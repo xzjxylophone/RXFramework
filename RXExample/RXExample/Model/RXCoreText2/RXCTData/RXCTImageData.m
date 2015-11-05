@@ -30,7 +30,10 @@ static CGFloat widthCallback(void *ref)
     return imageData.width;
 }
 
-
+static void deallocCallback(void *ref)
+{
+    // Do Nothing
+}
 
 
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
@@ -42,12 +45,16 @@ static CGFloat widthCallback(void *ref)
     callbacks.getAscent = ascentCallback;
     callbacks.getDescent = descentCallback;
     callbacks.getWidth = widthCallback;
+    callbacks.dealloc = deallocCallback;
+    
     CTRunDelegateRef delegateRef = CTRunDelegateCreate(&callbacks, (__bridge void *)(self));
     // 使用 0xFFFC 作为空白的占位符
     unichar objectReplacementChar = 0xFFFC;
     NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
     NSDictionary *attributes = config.attributes;
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
+    
+    // 给这个attributedString设置属性
     CFAttributedStringSetAttribute((CFMutableAttributedStringRef)attributedString, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegateRef);
     CFRelease(delegateRef);
     

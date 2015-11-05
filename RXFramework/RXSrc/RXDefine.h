@@ -17,15 +17,25 @@
 #endif
 
 
+#ifndef RXLogSwitch
 #define RXLogSwitch        1
+#endif
+
+
+
 
 
 #if RXLogSwitch
 #define RXLog(frmt, ...)   NSLog(frmt, ##__VA_ARGS__)
 #define RXWarning(frmt, ...)   NSLog(frmt, ##__VA_ARGS__)
+
+#define RXClassMethod   NSLog(@"%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
 #else
 #define RXLog(frmt, ...)   do{}while(0)
 #define RXWarning(frmt, ...)   do{}while(0)
+
+#define RXClassMethod   do{}while(0)
+
 #endif
 
 

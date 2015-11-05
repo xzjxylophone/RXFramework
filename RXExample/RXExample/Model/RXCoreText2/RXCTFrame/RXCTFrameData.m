@@ -80,7 +80,6 @@
     if (self.imageAry.count == 0) {
         return;
     }
-#warning 也许有点问题
     NSArray *lines = (NSArray *)CTFrameGetLines(self.frameRef);
     NSUInteger lineCount = lines.count;
     

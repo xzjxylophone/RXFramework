@@ -7,7 +7,7 @@ pod 'Masonry'
 pod 'YTKKeyValueStore'
 
 
-
+pod "Aspects"
 
 
 
