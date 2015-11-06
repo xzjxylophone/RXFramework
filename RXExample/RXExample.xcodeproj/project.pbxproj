@@ -54,6 +54,7 @@
 		58A160461BE351DE004E313A /* REConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160451BE351DE004E313A /* REConfigViewController.m */; };
 		58A160491BE35652004E313A /* RXConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160481BE35652004E313A /* RXConfigCell.m */; };
 		58A91D8A1BE367A800F55465 /* UIDevice+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */; };
+		58BC78BD1BEC53A000C081DB /* NSString+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BC78BC1BEC53A000C081DB /* NSString+MethodSwizzling.m */; };
 		58C43B701BCA890D002727DF /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6D1BCA890D002727DF /* RXUser.m */; };
 		58C43B711BCA890D002727DF /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6F1BCA890D002727DF /* RXUserManager.m */; };
 		58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B731BCA892F002727DF /* RXTVSectionItem.m */; };
@@ -184,6 +185,8 @@
 		58A160481BE35652004E313A /* RXConfigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXConfigCell.m; sourceTree = "<group>"; };
 		58A91D881BE367A800F55465 /* UIDevice+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RXUtility.h"; sourceTree = "<group>"; };
 		58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RXUtility.m"; sourceTree = "<group>"; };
+		58BC78BB1BEC53A000C081DB /* NSString+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MethodSwizzling.h"; sourceTree = "<group>"; };
+		58BC78BC1BEC53A000C081DB /* NSString+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MethodSwizzling.m"; sourceTree = "<group>"; };
 		58C43B6C1BCA890D002727DF /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
 		58C43B6D1BCA890D002727DF /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
 		58C43B6E1BCA890D002727DF /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
@@ -405,6 +408,7 @@
 		587B2E6F1BC7B00A00162929 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58BC78BA1BEC52AC00C081DB /* MethodSwizzling */,
 				5872A5D01BE740EC008A7C98 /* Data */,
 				5827107D1BE85A0D004D9053 /* RXCoreText2 */,
 				5872A5C21BE70015008A7C98 /* RXCoreText */,
@@ -422,6 +426,15 @@
 				58A160421BE30B60004E313A /* RXDataProvider.m */,
 			);
 			path = RXCache;
+			sourceTree = "<group>";
+		};
+		58BC78BA1BEC52AC00C081DB /* MethodSwizzling */ = {
+			isa = PBXGroup;
+			children = (
+				58BC78BB1BEC53A000C081DB /* NSString+MethodSwizzling.h */,
+				58BC78BC1BEC53A000C081DB /* NSString+MethodSwizzling.m */,
+			);
+			path = MethodSwizzling;
 			sourceTree = "<group>";
 		};
 		58C8EC0A1BC64B59008AFC3A = {
@@ -781,6 +794,7 @@
 				58A160491BE35652004E313A /* RXConfigCell.m in Sources */,
 				582710961BE85F65004D9053 /* RXCTImageData.m in Sources */,
 				582710951BE85F65004D9053 /* RXCTData.m in Sources */,
+				58BC78BD1BEC53A000C081DB /* NSString+MethodSwizzling.m in Sources */,
 				58C8ECB71BC65BD7008AFC3A /* RXDatePickerView.m in Sources */,
 				58C8EC921BC65BD7008AFC3A /* RXHttpBlock.m in Sources */,
 				58C8EC951BC65BD7008AFC3A /* RXShareManager.m in Sources */,

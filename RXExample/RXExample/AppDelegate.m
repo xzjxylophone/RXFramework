@@ -21,8 +21,11 @@
 {
     UIViewController *vc1 = nil;
     vc1 = [UIViewController rx_vcWithString:@"rxpage://REMainViewController"];
-//    vc1 = [UIViewController rx_vcWithString:@"rxpage://RETestViewController"];
-//    vc1 = [UIViewController rx_vcWithString:@"rxpage://REMain2ViewController"];
+    //    vc1 = [UIViewController rx_vcWithString:@"rxpage://RETestViewController"];
+    //    vc1 = [UIViewController rx_vcWithString:@"rxpage://REMain2ViewController"];
+//        vc1 = [UIViewController rx_vcWithString:@"rxpage://REConfigViewController"];
+    
+    
     
     
     self.mainNC = [[RXNavigationController alloc] initWithRootViewController:vc1];

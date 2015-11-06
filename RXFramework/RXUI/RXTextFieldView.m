@@ -15,6 +15,8 @@
 {
     if (_tf == nil) {
         _tf = [[UITextField alloc] initWithFrame:CGRectZero];
+        
+        _tf.placeholder = @"";
         [self addSubview:_tf];
     }
     return _tf;

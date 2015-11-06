@@ -16,6 +16,9 @@
 #import "RXCoreTextHeader.h"
 
 #import "RXCTHeader.h"
+#import "NSString+MethodSwizzling.h"
+
+#import <objc/runtime.h>
 @interface REMainViewController ()
 @property (weak, nonatomic) IBOutlet RXLabelView *rxLabelView;
 @property (strong, nonatomic) IBOutlet UIView *vTest;
@@ -37,6 +40,7 @@
 {
     [self.navigationController rx_openString:@"rxpage://REConfigViewController" query:nil animate:YES];
 }
+
 
 
 
@@ -204,7 +208,23 @@
 
 
 
+- (void)testMethodSwizzling
+{
+    Method originalMethod = class_getInstanceMethod([NSString class], @selector(lowercaseString));
+    Method swapMethod = class_getInstanceMethod([NSString class], @selector(myAction));
+    
+    method_exchangeImplementations(originalMethod, swapMethod);
+    
+    NSString *str = @"THis is a TESt!";
+    
+    NSString *str2 = [str lowercaseString];
+    NSLog(@"str2:%@", str2);
+    
+    method_exchangeImplementations(originalMethod, swapMethod);
 
+    
+    
+}
 
 
 
@@ -239,7 +259,9 @@
     
 //    self.view.backgroundColor = [UIColor redColor];
     
-    [self testConfigVC];
+//    [self testConfigVC];
+    
+    [self testMethodSwizzling];
     
 }
 

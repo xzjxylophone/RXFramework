@@ -17,6 +17,7 @@
 #pragma mark - ReadOnly
 - (CGFloat)rx_viewRealHeight
 {
+    // 有很大的问题!!!
     UIViewController *vc = [self.view rx_viewController];
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     
