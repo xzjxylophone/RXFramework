@@ -55,6 +55,7 @@
 		58A160491BE35652004E313A /* RXConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A160481BE35652004E313A /* RXConfigCell.m */; };
 		58A91D8A1BE367A800F55465 /* UIDevice+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */; };
 		58BC78BD1BEC53A000C081DB /* NSString+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BC78BC1BEC53A000C081DB /* NSString+MethodSwizzling.m */; };
+		58BC78C11BECAC9E00C081DB /* RXVCMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BC78C01BECAC9E00C081DB /* RXVCMediator.m */; };
 		58C43B701BCA890D002727DF /* RXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6D1BCA890D002727DF /* RXUser.m */; };
 		58C43B711BCA890D002727DF /* RXUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B6F1BCA890D002727DF /* RXUserManager.m */; };
 		58C43B741BCA892F002727DF /* RXTVSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C43B731BCA892F002727DF /* RXTVSectionItem.m */; };
@@ -187,6 +188,8 @@
 		58A91D891BE367A800F55465 /* UIDevice+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RXUtility.m"; sourceTree = "<group>"; };
 		58BC78BB1BEC53A000C081DB /* NSString+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MethodSwizzling.h"; sourceTree = "<group>"; };
 		58BC78BC1BEC53A000C081DB /* NSString+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MethodSwizzling.m"; sourceTree = "<group>"; };
+		58BC78BF1BECAC9E00C081DB /* RXVCMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXVCMediator.h; sourceTree = "<group>"; };
+		58BC78C01BECAC9E00C081DB /* RXVCMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXVCMediator.m; sourceTree = "<group>"; };
 		58C43B6C1BCA890D002727DF /* RXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUser.h; sourceTree = "<group>"; };
 		58C43B6D1BCA890D002727DF /* RXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUser.m; sourceTree = "<group>"; };
 		58C43B6E1BCA890D002727DF /* RXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUserManager.h; sourceTree = "<group>"; };
@@ -437,6 +440,15 @@
 			path = MethodSwizzling;
 			sourceTree = "<group>";
 		};
+		58BC78BE1BECAC8800C081DB /* RXVCMediator */ = {
+			isa = PBXGroup;
+			children = (
+				58BC78BF1BECAC9E00C081DB /* RXVCMediator.h */,
+				58BC78C01BECAC9E00C081DB /* RXVCMediator.m */,
+			);
+			path = RXVCMediator;
+			sourceTree = "<group>";
+		};
 		58C8EC0A1BC64B59008AFC3A = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +536,7 @@
 		58C8EC3C1BC65BD7008AFC3A /* RXSrc */ = {
 			isa = PBXGroup;
 			children = (
+				58BC78BE1BECAC8800C081DB /* RXVCMediator */,
 				58A160401BE30B4C004E313A /* RXCache */,
 				58C8EC3D1BC65BD7008AFC3A /* RXApp */,
 				58C8EC421BC65BD7008AFC3A /* RXAppPch.h */,
@@ -802,6 +815,7 @@
 				582710B11BE8B791004D9053 /* RXCTFrame.m in Sources */,
 				582710AE1BE8B33C004D9053 /* RXCTTextFrame.m in Sources */,
 				5837E22B1BDF168A00331760 /* UIImage+RXUtility.m in Sources */,
+				58BC78C11BECAC9E00C081DB /* RXVCMediator.m in Sources */,
 				58C8ECB21BC65BD7008AFC3A /* UINavigationController+RXSDK.m in Sources */,
 				589D85091BDE105300DF9D6A /* RXTextFieldView.m in Sources */,
 				58C8ECBB1BC65BD7008AFC3A /* RXVerifyButton.m in Sources */,

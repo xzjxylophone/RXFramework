@@ -33,6 +33,7 @@
 - (void)rx_tapAnywhereToDismissKeyboard;
 
 
+
 #pragma mark - 工厂方法创建VC
 + (id)rx_vcWithString:(NSString *)string;
 + (id)rx_vcWithString:(NSString *)string query:(NSDictionary *)query;
