@@ -12,17 +12,20 @@
 #import "RXCTTextFrame.h"
 @implementation RXCTTextData
 
-
-
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame
 {
     NSMutableDictionary *attributes = config.attributes;
     UIColor *textColor = self.textColor;
-    CGFloat fontSize = self.font.pointSize;
-    attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
-    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)self.font.fontName, fontSize, NULL);
-    attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
-    CFRelease(fontRef);
+    if (textColor != nil) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
+
+    }
+    if (self.font != nil) {
+        CGFloat fontSize = self.font.pointSize;
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)self.font.fontName, fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     

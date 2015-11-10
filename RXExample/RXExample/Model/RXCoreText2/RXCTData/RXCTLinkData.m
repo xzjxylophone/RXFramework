@@ -16,16 +16,22 @@
 {
     NSMutableDictionary *attributes = config.attributes;
     UIColor *textColor = self.textColor;
-    CGFloat fontSize = self.font.pointSize;
-    attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
-    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)self.font.fontName, fontSize, NULL);
-    attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+    
+    if (textColor != nil) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
+        
+    }
+    if (self.font != nil) {
+        CGFloat fontSize = self.font.pointSize;
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)self.font.fontName, fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
     
     // 添加一条线
     attributes[(id)kCTUnderlineStyleAttributeName] = [NSNumber numberWithInt:kCTUnderlineStyleSingle];
     
     
-    CFRelease(fontRef);
     NSString *content = self.content;
     NSAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     

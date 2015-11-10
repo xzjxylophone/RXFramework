@@ -11,6 +11,8 @@
 #import "RXCTLinkFrame.h"
 #import "RXCTImageData.h"
 
+#import "RXCTFrameParserConfig.h"
+
 @interface RXCTFrameData ()
 
 @property (nonatomic, strong) NSArray *m_imageAry;
@@ -53,8 +55,6 @@
 - (void)setAttributedArray:(NSArray *)attributedArray
 {
     _attributedArray = attributedArray;
-    
-    
     NSMutableArray *imageAry = [NSMutableArray array];
     NSMutableArray *linkAry = [NSMutableArray array];
     NSMutableArray *textAry = [NSMutableArray array];
@@ -75,6 +75,7 @@
 
 
 #pragma mark - Private
+// 调整image的位置
 - (void)fillImagePosition
 {
     if (self.imageAry.count == 0) {
@@ -85,12 +86,8 @@
     
     CGPoint lineOrigins[lineCount];
     CTFrameGetLineOrigins(self.frameRef, CFRangeMake(0, 0), lineOrigins);
-    
     int imgIndex = 0;
-    
-    
     RXCTImageFrame *imageFrame = self.imageAry[0];
-    
     for (int i = 0; i < lineCount; i++) {
         if (imageFrame == nil) {
             break;
@@ -104,30 +101,17 @@
             if (delegateRef == nil) {
                 continue;
             }
-            
-            
-            // 这一段代码真的需要吗??
-            // 获取到对象了, run 的delegate
-            RXCTImageData *imageData = CTRunDelegateGetRefCon(delegateRef);
-            if (![imageData isKindOfClass:[RXCTImageData class]]) {
-                continue;
-            }
-            // end 这一段代码真的需要吗??
-            
             CGRect runBounds;
             CGFloat ascent;
             CGFloat descent;
             runBounds.size.width = CTRunGetTypographicBounds(runRef, CFRangeMake(0, 0), &ascent, &descent, NULL);
             runBounds.size.height = ascent + descent;
-            
             CGFloat xOffset = CTLineGetOffsetForStringIndex(lineRef, CTRunGetStringRange(runRef).location, NULL);
             runBounds.origin.x = lineOrigins[i].x + xOffset;
             runBounds.origin.y = lineOrigins[i].y;
             runBounds.origin.y -= descent;
-            
             CGPathRef pathRef = CTFrameGetPath(self.frameRef);
             CGRect colRect = CGPathGetBoundingBox(pathRef);
-            
             CGRect delegateBounds = CGRectOffset(runBounds, colRect.origin.x, colRect.origin.y);
             imageFrame.imagePosition = delegateBounds;
             imgIndex++;
@@ -136,11 +120,7 @@
             } else {
                 imageFrame = self.imageAry[imgIndex];
             }
-            
-            
-            
         }
-        
     }
 }
 
@@ -156,9 +136,41 @@
     }
 }
 
+#pragma mark - Class Method
 
-
-
-
-
++ (RXCTFrameData *)parseWithArray:(NSArray *)ary config:(RXCTFrameParserConfig *)config
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
+    NSMutableArray *array = [NSMutableArray array];
+    for (RXCTData *ctData in ary) {
+        NSUInteger startPos = attributedString.length;
+        RXCTFrame *rxctFrame = nil;
+        NSAttributedString *ctDataAttributedString = [ctData attributedStringWithConfig:config outRXCTFrame:&rxctFrame];
+        [attributedString appendAttributedString:ctDataAttributedString];
+        NSUInteger length = attributedString.length - startPos;
+        NSRange range = NSMakeRange(startPos, length);
+        rxctFrame.range = range;
+        [array addObject:rxctFrame];
+    }
+    // 创建 CTFramesetterRef 实例
+    CTFramesetterRef framesetterRef = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attributedString);
+    // 获得要绘制的区域的高度
+    CGSize restrictSize = CGSizeMake(config.width, CGFLOAT_MAX); // 限制的区域
+    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetterRef, CFRangeMake(0, 0), nil, restrictSize, nil);
+    CGFloat textHeight = coreTextSize.height;
+    // 创建 CTFrameRef 实例
+    CGMutablePathRef pathRef = CGPathCreateMutable();
+    CGPathAddRect(pathRef, NULL, CGRectMake(0, 0, config.width, textHeight));
+    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetterRef, CFRangeMake(0, 0), pathRef, NULL);
+    CFRelease(pathRef);
+    // 将生成好的 CTFrameRef 实例和计算好的绘制高度保存到 CoreTextData 实例中,最后返回CoreTextData实例
+    RXCTFrameData *ctFrameData = [[RXCTFrameData alloc] init];
+    ctFrameData.frameRef = frameRef;
+    ctFrameData.height = textHeight;
+    ctFrameData.content = attributedString;
+    ctFrameData.attributedArray = array;
+    CFRelease(frameRef);
+    CFRelease(framesetterRef);
+    return ctFrameData;
+}
 @end

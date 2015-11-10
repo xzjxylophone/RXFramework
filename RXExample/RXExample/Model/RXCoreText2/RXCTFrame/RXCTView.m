@@ -33,25 +33,18 @@
             return;
         }
     }
-    
-    
-    
     CTFrameRef frameRef = self.rxctFrameData.frameRef;
     CFArrayRef lines = CTFrameGetLines(frameRef);
     if (lines == NULL) {
         return;
     }
-    
     CFIndex count = CFArrayGetCount(lines);
-    
     // 获得每一行的origin坐标
     CGPoint origins[count];
     CTFrameGetLineOrigins(frameRef, CFRangeMake(0, 0), origins);
-    
     // 翻转坐标系
     CGAffineTransform transform = CGAffineTransformMakeTranslation(0, self.bounds.size.height);
     transform = CGAffineTransformScale(transform, 1.0f, -1.0f);
-    
     CFIndex idx = -1;
     for (int i = 0; i < count; i++) {
         CGPoint linePoint = origins[i];
@@ -64,7 +57,6 @@
         CGFloat height = ascent + descent;
         CGRect flippedRect = CGRectMake(linePoint.x, linePoint.y, width, height);
         CGRect rect = CGRectApplyAffineTransform(flippedRect, transform);
-        
         if (CGRectContainsPoint(rect, point)) {
             // 将点击的坐标转换成相对于当前行的坐标
             CGPoint relativePoint = CGPointMake(point.x - CGRectGetMinX(rect), point.y - CGRectGetMinY(rect));

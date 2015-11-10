@@ -8,6 +8,11 @@
 
 #import "RXCTData.h"
 
+
+/*
+ 可点击文本类
+ */
+
 @interface RXCTLinkData : RXCTData
 
 @property (nonatomic, strong) UIColor *textColor;

@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "RXCTFrame.h"
-
+/*
+ 描述普通文本Frame类
+ */
 @interface RXCTTextFrame : RXCTFrame
 
 

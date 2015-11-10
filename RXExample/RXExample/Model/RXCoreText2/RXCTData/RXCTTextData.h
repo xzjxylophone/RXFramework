@@ -8,6 +8,10 @@
 
 #import "RXCTData.h"
 
+/*
+ 普通文本类
+ */
+
 @interface RXCTTextData : RXCTData
 
 

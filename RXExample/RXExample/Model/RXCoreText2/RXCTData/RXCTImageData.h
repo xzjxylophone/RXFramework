@@ -8,6 +8,12 @@
 
 #import "RXCTData.h"
 
+
+
+/*
+ 图片类
+ */
+
 @interface RXCTImageData : RXCTData
 
 

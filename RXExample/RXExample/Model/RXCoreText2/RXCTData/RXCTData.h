@@ -13,11 +13,16 @@
 @class RXCTFrameParserConfig;
 
 
+/*
+ 输入数据的基类
+ */
 @interface RXCTData : NSObject
 
 
 
-
+/*
+ 此函数的作用是
+ */
 - (NSAttributedString *)attributedStringWithConfig:(RXCTFrameParserConfig *)config outRXCTFrame:(RXCTFrame **)outRXCTFrame;
 
 

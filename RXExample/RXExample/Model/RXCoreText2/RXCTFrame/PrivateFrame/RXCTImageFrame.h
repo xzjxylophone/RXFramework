@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "RXCTFrame.h"
 
+
+/*
+ 描述图片Frame类
+ */
 @interface RXCTImageFrame : RXCTFrame
 
 

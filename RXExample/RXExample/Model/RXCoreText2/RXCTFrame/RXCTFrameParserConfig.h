@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UIColor *textColor;       // 文字颜色
 
 
-
+// 次config 得到的Attributes 的 Dictionary
 @property (nonatomic, readonly) NSMutableDictionary *attributes;
 
 
