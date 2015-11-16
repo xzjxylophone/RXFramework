@@ -50,7 +50,7 @@
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
-    self.rx_top = height;
+    self.top = height;
     self.__m_isInForeground = NO;
     //动画结束
     [UIView commitAnimations];
@@ -58,7 +58,7 @@
 - (void)showInView:(UIView *)view
 {
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    self.rx_top = height;
+    self.top = height;
     [view addSubview:self];
     
     [UIView beginAnimations:@"doflip" context:nil];
@@ -66,7 +66,7 @@
     [UIView setAnimationDuration:0.5];
     
     
-    self.rx_top = height - self.rx_height;
+    self.top = height - self.height;
     self.__m_isInForeground = YES;
     //动画结束
     [UIView commitAnimations];
@@ -113,14 +113,14 @@
         
         
         self.datePicker = [[UIDatePicker alloc] init];
-        self.datePicker.rx_top = vTopHeight;
+        self.datePicker.top = vTopHeight;
         
         
         [self addSubview:self.vTop];
         [self addSubview:self.datePicker];
         
         
-        CGFloat height = vTopHeight + self.datePicker.rx_height;
+        CGFloat height = vTopHeight + self.datePicker.height;
         self.frame = CGRectMake(0, 0, width, height);
         self.backgroundColor = [UIColor whiteColor];
     }

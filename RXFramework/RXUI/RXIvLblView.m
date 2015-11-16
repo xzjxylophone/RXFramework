@@ -40,12 +40,12 @@
 
 - (void)fitToSuitable
 {
-    CGFloat ivWidth = self.iv.rx_width;
-    CGFloat ivHeight = self.iv.rx_height;
+    CGFloat ivWidth = self.iv.width;
+    CGFloat ivHeight = self.iv.height;
     
     [self.lbl sizeToFit];
-    CGFloat lblWidth = self.lbl.rx_width;
-    CGFloat lblHeight = self.lbl.rx_height;
+    CGFloat lblWidth = self.lbl.width;
+    CGFloat lblHeight = self.lbl.height;
     
     
     CGFloat realWidth = ivWidth + lblWidth + self.offset;
@@ -88,7 +88,7 @@
     self.lbl.frame = CGRectMake(lblX, lblY, lblWidth, lblHeight);
     
     
-    self.frame = CGRectMake(self.rx_left, self.rx_top, realWidth, realHeight);
+    self.frame = CGRectMake(self.left, self.top, realWidth, realHeight);
     
     
     

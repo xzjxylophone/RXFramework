@@ -13,123 +13,123 @@
 @implementation UIView (RXUtility)
 
 #pragma mark - Property
-- (id)rx_tgr
+- (id)tgr
 {
-    return objc_getAssociatedObject(self, @"rx_tgr");
+    return objc_getAssociatedObject(self, @"tgr");
 }
 
-- (void)setRx_tgr:(id)rx_tgr
+- (void)setTgr:(id)tgr
 {
-    objc_setAssociatedObject(self, @"rx_tgr", rx_tgr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @"tgr", tgr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (id)rx_data
+- (id)data
 {
-    return objc_getAssociatedObject(self, @"rx_data");
-}
-
-- (void)setRx_data:(id)rx_data
-{
-    objc_setAssociatedObject(self, @"rx_data", rx_data, OBJC_ASSOCIATION_RETAIN);
+    return objc_getAssociatedObject(self, @"data");
 }
 
-- (CGFloat)rx_left
+- (void)setData:(id)data
+{
+    objc_setAssociatedObject(self, @"data", data, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (CGFloat)left
 {
     return self.frame.origin.x;
 }
 
-- (void)setRx_left:(CGFloat)x
+- (void)setLeft:(CGFloat)x
 {
     CGRect frame = self.frame;
     frame.origin.x = ceilf(x);
     self.frame = frame;
 }
 
-- (CGFloat)rx_top
+- (CGFloat)top
 {
     return self.frame.origin.y;
 }
 
-- (void)setRx_top:(CGFloat)y
+- (void)setTop:(CGFloat)y
 {
     CGRect frame = self.frame;
     frame.origin.y = ceilf(y);
     self.frame = frame;
 }
 
-- (CGFloat)rx_right
+- (CGFloat)right
 {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRx_right:(CGFloat)right
+- (void)setRight:(CGFloat)right
 {
     CGRect frame = self.frame;
     frame.origin.x = ceilf(right - frame.size.width);
     self.frame = frame;
 }
 
-- (CGFloat)rx_bottom
+- (CGFloat)bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setRx_bottom:(CGFloat)bottom
+- (void)setBottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
     frame.origin.y = ceilf(bottom - frame.size.height);
     self.frame = frame;
 }
 
-- (CGFloat)rx_centerX
+- (CGFloat)centerX
 {
     return self.center.x;
 }
 
-- (void)setRx_centerX:(CGFloat)centerX
+- (void)setCenterX:(CGFloat)centerX
 {
     self.center = CGPointMake(ceilf(centerX), self.center.y);
 }
 
-- (CGFloat)rx_centerY
+- (CGFloat)centerY
 {
     return self.center.y;
 }
 
-- (void)setRx_centerY:(CGFloat)centerY
+- (void)setCenterY:(CGFloat)centerY
 {
     self.center = CGPointMake(self.center.x, ceilf(centerY));
 }
 
-- (CGFloat)rx_width
+- (CGFloat)width
 {
     return self.frame.size.width;
 }
 
-- (void)setRx_width:(CGFloat)width
+- (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = ceilf(width);
     self.frame = frame;
 }
 
-- (CGFloat)rx_height
+- (CGFloat)height
 {
     return self.frame.size.height;
 }
 
-- (void)setRx_height:(CGFloat)height
+- (void)setHeight:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = ceilf(height);
     self.frame = frame;
 }
 
-- (CGPoint)rx_origin
+- (CGPoint)origin
 {
     return self.frame.origin;
 }
 
-- (void)setRx_origin:(CGPoint)origin
+- (void)setOrigin:(CGPoint)origin
 {
     CGRect frame = self.frame;
     frame.origin = origin;
@@ -141,7 +141,7 @@
     return self.frame.size;
 }
 
-- (void)setRx_size:(CGSize)size
+- (void)setSize:(CGSize)size
 {
     CGRect frame = self.frame;
     frame.size = size;
@@ -151,7 +151,7 @@
 - (void)rx_makeRound
 {
     self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = self.rx_width / 2.0f;
+    self.layer.cornerRadius = self.width / 2.0f;
 }
 
 
@@ -167,7 +167,7 @@
 - (void)rx_makeLeftRightRound
 {
     self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = self.rx_height / 2.0f;
+    self.layer.cornerRadius = self.height / 2.0f;
 }
 
 - (void)rx_removeAllSubviews
@@ -240,20 +240,20 @@
 
 - (void)rx_addGestureRecognizerWithTarget:(id)target action:(SEL)action
 {
-    if (self.rx_tgr != nil) {
-        [self removeGestureRecognizer:self.rx_tgr];
+    if (self.tgr != nil) {
+        [self removeGestureRecognizer:self.tgr];
     }
     UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     tgr.numberOfTapsRequired = 1;
-    self.rx_tgr = tgr;
+    self.tgr = tgr;
     self.userInteractionEnabled = YES;
-    [self addGestureRecognizer:self.rx_tgr];
+    [self addGestureRecognizer:self.tgr];
 }
 
 - (void)rx_removeGestureRecognizer
 {
-    if (self.rx_tgr != nil) {
-        [self removeGestureRecognizer:self.rx_tgr];
+    if (self.tgr != nil) {
+        [self removeGestureRecognizer:self.tgr];
     }
 }
 

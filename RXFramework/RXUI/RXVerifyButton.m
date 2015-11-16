@@ -81,10 +81,8 @@
         {
             [self addSubview:self.lblShow];
             [self setTitle:@"" forState:UIControlStateNormal];
-            
             NSString *text = [NSString stringWithFormat:@"%ds", self.maxTime];
             self.lblShow.text = text;
-
             [RXManager fillAllInSuperView:self subView:self.lblShow];
             self.enabled = NO;
             [self startTimer];
@@ -198,14 +196,12 @@
     self.lblShow.backgroundColor = [UIColor clearColor];
     self.lblShow.textAlignment = NSTextAlignmentCenter;
     self.lblShow.textColor = [UIColor whiteColor];
-    
     [self addTarget:self action:@selector(btnTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
 #if DEBUG
     self.maxTime = 10;
 #else
     self.maxTime = 60;
 #endif
-    
     self.e_RX_VerifyStatus = kE_RX_VerifyStatusInit;
 }
 

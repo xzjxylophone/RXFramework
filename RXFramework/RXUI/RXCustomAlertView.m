@@ -86,11 +86,11 @@
 - (UIView *)createDialogView
 {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    CGSize dialogSize = self.contentView.rx_size;
+    CGSize dialogSize = self.contentView.size;
     // For the black background
     self.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
     UIView *dialogContainer = [[UIView alloc] initWithFrame:CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height)];
-    self.contentView.rx_origin = CGPointMake(0, 0);
+    self.contentView.origin = CGPointMake(0, 0);
     [dialogContainer addSubview:self.contentView];
     return dialogContainer;
 }

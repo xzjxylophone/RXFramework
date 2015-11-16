@@ -42,7 +42,7 @@
 - (CGFloat)showY
 {
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    return (height - self.rx_height) / 2.0f;
+    return (height - self.height) / 2.0f;
 }
 
 
@@ -53,12 +53,12 @@
     [window addSubview:self.vBg];
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CGFloat selfY = self.showY;
-    self.rx_top = height;
+    self.top = height;
     if (self.isSupportAnimate) {
         [UIView beginAnimations:@"abc" context:nil];
         [UIView setAnimationDuration:0.5];
     }
-    self.rx_top = selfY;
+    self.top = selfY;
     if (self.isSupportAnimate) {
         [UIView commitAnimations];
     }
@@ -76,7 +76,7 @@
         [self.vBg removeFromSuperview];
         [self removeFromSuperview];
     }
-    self.rx_top = height;
+    self.top = height;
     if (self.isSupportAnimate) {
         [UIView commitAnimations];
     }

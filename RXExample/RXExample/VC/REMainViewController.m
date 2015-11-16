@@ -107,7 +107,7 @@
     
     self.rxDisplayView = [[RXDisplayView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
     self.rxDisplayView.data = data;
-    self.rxDisplayView.rx_height = data.height;
+    self.rxDisplayView.height = data.height;
     self.rxDisplayView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.rxDisplayView];
 }
@@ -125,7 +125,7 @@
     
     self.rxDisplayView = [[RXDisplayView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
     self.rxDisplayView.data = data;
-    self.rxDisplayView.rx_height = data.height;
+    self.rxDisplayView.height = data.height;
     self.rxDisplayView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.rxDisplayView];
 }
@@ -142,7 +142,7 @@
     
     self.rxDisplayView = [[RXDisplayView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
     self.rxDisplayView.data = data;
-    self.rxDisplayView.rx_height = data.height;
+    self.rxDisplayView.height = data.height;
     self.rxDisplayView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.rxDisplayView];
 }
@@ -161,7 +161,7 @@
     
     self.rxDisplayView = [[RXDisplayView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
     self.rxDisplayView.data = data;
-    self.rxDisplayView.rx_height = data.height;
+    self.rxDisplayView.height = data.height;
     self.rxDisplayView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.rxDisplayView];
 }
@@ -207,7 +207,7 @@
     RXCTFrameData *data = [RXCTFrameData parseWithArray:ary config:config];
     RXCTView *rxctView = [[RXCTView alloc] initWithFrame:CGRectMake(0, 0, k_CS_RX_WinWidth, 0)];
     rxctView.rxctFrameData = data;
-    rxctView.rx_height = data.height;
+    rxctView.height = data.height;
     rxctView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:rxctView];
 }

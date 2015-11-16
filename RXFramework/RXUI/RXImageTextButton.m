@@ -36,8 +36,8 @@
     self.lbl.text = text;
     [self.lbl sizeToFit];
     
-    CGFloat lblWidth = self.lbl.rx_width;
-    CGFloat lblHeight = self.lbl.rx_height;
+    CGFloat lblWidth = self.lbl.width;
+    CGFloat lblHeight = self.lbl.height;
     CGFloat lblY = (height - lblHeight) / 2.0f;
     CGFloat totalWidth = ivWidth + self.offset + lblWidth;
     CGFloat ivX = (width - totalWidth) / 2.0f;

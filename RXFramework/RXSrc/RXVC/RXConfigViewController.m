@@ -72,7 +72,7 @@
     
     RXTVSectionItem *sectionItem = self.functionItems[section];
     UIView *view = sectionItem.object;
-    return view.rx_height;
+    return view.height;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {

@@ -11,22 +11,22 @@
 @interface UIView (RXUtility)
 
 
-@property (nonatomic, retain) id rx_data;
+@property (nonatomic, retain) id data;
 
 
-@property (nonatomic, readwrite) CGFloat rx_left;
-@property (nonatomic, readwrite) CGFloat rx_top;
-@property (nonatomic, readwrite) CGFloat rx_right;
-@property (nonatomic, readwrite) CGFloat rx_bottom;
-@property (nonatomic, readwrite) CGFloat rx_centerX;
-@property (nonatomic, readwrite) CGFloat rx_centerY;
-@property (nonatomic, readwrite) CGFloat rx_width;
-@property (nonatomic, readwrite) CGFloat rx_height;
-@property (nonatomic, readwrite) CGPoint rx_origin;
-@property (nonatomic, readwrite) CGSize rx_size;
+@property (nonatomic, readwrite) CGFloat left;
+@property (nonatomic, readwrite) CGFloat top;
+@property (nonatomic, readwrite) CGFloat right;
+@property (nonatomic, readwrite) CGFloat bottom;
+@property (nonatomic, readwrite) CGFloat centerX;
+@property (nonatomic, readwrite) CGFloat centerY;
+@property (nonatomic, readwrite) CGFloat width;
+@property (nonatomic, readwrite) CGFloat height;
+@property (nonatomic, readwrite) CGPoint origin;
+@property (nonatomic, readwrite) CGSize size;
 
 
-@property (nonatomic, strong) UITapGestureRecognizer *rx_tgr;
+@property (nonatomic, strong) UITapGestureRecognizer *tgr;
 
 // 使整个UIView 变成圆形,  当且只有width = height 的时候才是圆形
 - (void)rx_makeRound;
