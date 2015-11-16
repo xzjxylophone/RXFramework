@@ -136,7 +136,7 @@
     self.frame = frame;
 }
 
-- (CGSize)rx_size
+- (CGSize)size
 {
     return self.frame.size;
 }
